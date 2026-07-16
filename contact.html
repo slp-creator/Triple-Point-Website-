@@ -7,8 +7,8 @@
   <link rel="canonical" href="https://www.triplepointspeechtherapy.com/contact.html">
   <meta name="keywords" content="speech therapy Truckee, myofunctional therapy Lake Tahoe, tongue tie Mammoth Lakes, early intervention Truckee, book speech therapy, contact speech therapist Truckee, telehealth speech therapy California, infant speech therapy Lake Tahoe">
 <meta name="description" content="Book a free 30-minute consultation with Lauren O'Connor, MS CCC-SLP. Offices in Truckee and Mammoth Lakes. Speech therapy, myofunctional therapy, tongue tie and lip tie, and early intervention for infants, children and adults. Telehealth throughout California.">
-<link rel="icon" type="image/png" href="/favicon.png">
-<link rel="stylesheet" href="/css/style.css">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="stylesheet" href="css/style.css">
 <style>
 .contact-main{padding:72px 64px;background:var(--white)}
 .contact-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:80px;align-items:start}
@@ -27,20 +27,6 @@
 .booking-box h4{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:var(--mist);margin-bottom:8px}
 .booking-box p{font-size:13px;color:rgba(216,235,240,.7);line-height:1.65;margin-bottom:20px}
 
-.contact-form h3{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;color:var(--deep);margin-bottom:6px}
-.contact-form 
-
-
-
-
-
-
-
-
-
-
-.success-msg{display:none;background:rgba(139,186,202,.25);border:1px solid var(--ice);border-radius:4px;padding:20px;text-align:center;margin-top:16px}
-.success-msg p{font-size:14px;color:var(--deep)}
 .map-section{padding:0 64px 72px;background:var(--white)}
 .map-frame{background:var(--mist);border:1px solid var(--border);border-radius:4px;overflow:hidden;height:380px}
 .map-placeholder{text-align:center;color:var(--muted)}
@@ -168,7 +154,7 @@
   </div>
   <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:16px">
     <p style="font-size:13px;color:var(--muted)"> &nbsp;10775 Pioneer Trail, Suite 216a &nbsp;·&nbsp; Truckee, CA 96161</p>
-    <a href="https://maps.google.com/?q=10775+Pioneer+Trail+Suite+216a+Truckee+CA+96161
+    <a href="https://maps.google.com/?q=10775+Pioneer+Trail+Suite+216a+Truckee+CA+96161"
        target="_blank" rel="noopener"
        style="font-size:12px;font-weight:500;color:var(--slate);letter-spacing:.04em;text-decoration:underline">
       Open in Google Maps →
@@ -177,19 +163,11 @@
 </div>
 
 <div id="footer-placeholder"></div>
-<script src="/js/shared.js"></script>
+<script src="js/shared.js"></script>
 <script>
 renderNav('contact');
 renderFooter();
 window.addEventListener('scroll',()=>{document.getElementById('main-nav').classList.toggle('scrolled',window.scrollY>40)});
-function submitForm(){
-  const fields=['fname','lname','email','for','concern','modality','message'];
-  const empty=fields.filter(f=>!document.getElementById(f).value.trim());
-  if(empty.length){alert('Please fill in all fields before sending.');return;}
-  document.getElementById('success').style.display='block';
-  document.querySelector('.form-submit').disabled=true;
-  document.querySelector('.form-submit').textContent='Message sent ';
-}
 </script>
 
 <!-- MOBILE OVERRIDE -->
