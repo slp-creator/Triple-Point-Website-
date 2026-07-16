@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Message Received | Triple Point Speech Therapy</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="stylesheet" href="/css/style.css">
+<style>
+.thankyou-section{min-height:60vh;display:flex;align-items:center;justify-content:center;padding:64px 36px;background:var(--white)}
+.thankyou-inner{max-width:520px;text-align:center}
+.thankyou-inner .check{width:56px;height:56px;border-radius:50%;background:var(--ice);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-size:24px;color:var(--deep)}
+.thankyou-inner h1{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;color:var(--deep);margin-bottom:14px;line-height:1.2}
+.thankyou-inner h1 em{font-style:italic;color:var(--slate)}
+.thankyou-inner p{font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:28px}
+.thankyou-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<div id="nav-placeholder"></div>
+
+<section class="thankyou-section">
+  <div class="thankyou-inner">
+    <div class="check">&#10003;</div>
+    <h1>Message <em>received.</em></h1>
+    <p>Thank you for reaching out to Triple Point Speech Therapy. Lauren will review your message and get back to you within one business day.</p>
+    <p>In the meantime, you're welcome to book a free 30-minute consultation directly through the online booking system.</p>
+    <div class="thankyou-btns">
+      <a href="https://triplepointspeechtherapy.janeapp.com/" class="btn-primary" target="_blank" rel="noopener">Book a free consultation</a>
+      <a href="index.html" class="btn-secondary">Back to home</a>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<script src="/js/shared.js"></script>
+<script>
+renderNav('contact');
+renderFooter();
+window.addEventListener('scroll',()=>{document.getElementById('main-nav').classList.toggle('scrolled',window.scrollY>40)});
+</script>
+</body>
+</html>
