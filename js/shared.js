@@ -4,7 +4,7 @@ const BOOKING_URL = 'https://triplepointspeechtherapy.janeapp.com/';
 function renderNav(activePage) {
   const pages = [
     { href: 'index.html',    label: 'Home',     key: 'home' },
-    { href: 'services.html', label: 'Services', key: 'services', dropdown: [
+    { href: 'myofunctional-therapy.html', label: 'Services', key: 'services', dropdown: [
       { href: 'myofunctional-therapy.html', label: 'Myofunctional Therapy' },
       { href: 'early-intervention.html', label: 'Early Intervention Coaching' },
       { href: 'tongue-tie-support.html', label: 'Tongue Tie Support' },
@@ -75,7 +75,6 @@ function renderFooter() {
       <div class="footer-col">
         <h4>Navigation</h4>
         <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
         <a href="about.html">About Lauren</a>
         <a href="faq.html">FAQ</a>
         <a href="contact.html">Contact</a>
