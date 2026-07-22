@@ -7,8 +7,8 @@ function renderNav(activePage) {
     { href: 'services.html', label: 'Services', key: 'services', dropdown: [
       { href: 'myofunctional-therapy.html', label: 'Myofunctional Therapy' },
       { href: 'early-intervention.html', label: 'Early Intervention Coaching' },
-      { href: 'services.html#tongue-tie', label: 'Tongue Tie Support' },
-      { href: 'services.html#speech', label: 'Speech Therapy' },
+      { href: 'tongue-tie-support.html', label: 'Tongue Tie Support' },
+      { href: 'speech-therapy.html', label: 'Speech Therapy' },
     ]},
     { href: 'about.html',    label: 'About',    key: 'about' },
     { href: 'faq.html',      label: 'FAQ',      key: 'faq' },
@@ -84,8 +84,8 @@ function renderFooter() {
         <h4>Services</h4>
         <a href="myofunctional-therapy.html">Myofunctional Therapy</a>
         <a href="early-intervention.html">Early Intervention Coaching</a>
-        <a href="services.html#tongue-tie">Tongue Tie Support</a>
-        <a href="services.html#speech">Speech Therapy</a>
+        <a href="tongue-tie-support.html">Tongue Tie Support</a>
+        <a href="speech-therapy.html">Speech Therapy</a>
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
