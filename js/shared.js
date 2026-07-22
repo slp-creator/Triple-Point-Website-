@@ -18,7 +18,7 @@ function renderNav(activePage) {
     const active = p.key === activePage ? ' class="active"' : '';
     if (p.dropdown) {
       const items = p.dropdown.map(d => `<a href="${d.href}" style="display:block;padding:9px 16px;font-size:13px;color:var(--muted);border-bottom:1px solid var(--border);text-decoration:none;transition:background .15s" onmouseover="this.style.background='var(--mist)';this.style.color='var(--deep)'" onmouseout="this.style.background='';this.style.color='var(--muted)'">${d.label}</a>`).join('');
-      return `<div style="position:relative;display:inline-block;padding-bottom:8px" class="nav-dropdown"><a href="${p.href}"${active} style="display:flex;align-items:center;gap:4px">${p.label} <span style="font-size:10px;opacity:.6">▾</span></a><div class="nav-dropdown-menu" style="display:none;position:absolute;top:100%;left:0;background:var(--white);border:1px solid var(--border);border-radius:4px;padding:0;min-width:240px;box-shadow:0 8px 24px rgba(44,79,94,.1);margin-top:0;z-index:300;overflow:hidden">${items}</div></div>`;
+      return `<div style="position:relative;display:inline-flex;align-items:center" class="nav-dropdown"><a href="${p.href}"${active} style="display:flex;align-items:center;gap:4px">${p.label} <span style="font-size:10px;opacity:.6">▾</span></a><div class="nav-dropdown-menu" style="display:none;position:absolute;top:100%;left:0;padding-top:8px;background:transparent;z-index:300"><div style="background:var(--white);border:1px solid var(--border);border-radius:4px;min-width:240px;box-shadow:0 8px 24px rgba(44,79,94,.1);overflow:hidden">${items}</div></div></div>`;
     }
     return `<a href="${p.href}"${active}>${p.label}</a>`;
   }).join('');
