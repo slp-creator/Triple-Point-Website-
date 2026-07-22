@@ -94,12 +94,16 @@
 /* ── MOBILE ── */
 @media(max-width:768px){
   .hero{grid-template-columns:1fr;min-height:auto}
-  .hero-right{display:none}
+  .hero-right{display:block;padding:0 20px 28px;background:none}
+  .hero-img-frame{max-width:200px;margin:0 auto}
+  .hero-stat{position:static;display:inline-block;margin-top:10px;box-shadow:none}
   .hero-left{padding:32px 20px 28px}
   .hero-h1{font-size:26px;line-height:1.15}
   .hero-sub{max-width:100%;font-size:13px}
   .hero-badges{gap:10px;margin-top:12px;flex-wrap:wrap}
   .hero-badge{font-size:10px}
+  .hero-ctas{flex-direction:column}
+  .hero-ctas a{display:block;text-align:center;width:100%}
 
   .trust-bar{grid-template-columns:1fr 1fr}
   .trust-item{border-bottom:1px solid var(--border)}
@@ -296,7 +300,7 @@
         <span class="sc-link">Learn more →</span>
       </div>
     </div>
-    <div class="service-card" onclick="location.href='services.html#speech'">
+    <div class="service-card" onclick="location.href='speech-therapy.html'">
       <div class="sc-label"><span>Speech Therapy</span></div>
       <div class="sc-body">
         <h3>Speech Therapy</h3>
@@ -418,10 +422,12 @@ window.addEventListener('scroll',()=>{document.getElementById('main-nav').classL
 @media only screen and (max-width: 768px) {
   body { overflow-x: hidden !important; }
 
-  /* HERO */
+  /* HERO — keep clinician photo visible on mobile */
   .hero { display: block !important; }
   .hero-left { padding: 28px 16px 20px !important; }
-  .hero-right { display: none !important; }
+  .hero-right { display: block !important; padding: 0 16px 24px !important; background: none !important; }
+  .hero-img-frame { max-width: 200px !important; margin: 0 auto !important; }
+  .hero-stat { position: static !important; display: inline-block !important; margin-top: 10px !important; box-shadow: none !important; }
   .hero-h1 { font-size: 24px !important; line-height: 1.2 !important; }
   .hero-sub { font-size: 12px !important; max-width: 100% !important; }
   .hero-badges { flex-wrap: wrap !important; gap: 8px !important; }
