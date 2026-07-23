@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.triplepointspeechtherapy.com/sitemap.xml
+Sitemap: https://triplepointspeechtherapy.com/sitemap.xml
