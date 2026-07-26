@@ -42,7 +42,8 @@
 .feeding-list li{font-size:14px;color:var(--muted);padding:10px 0;border-bottom:1px solid var(--border);display:flex;gap:10px;align-items:flex-start;line-height:1.55}
 .feeding-list li:last-child{border-bottom:none}
 .feeding-list li::before{content:'';color:var(--steel);font-size:7px;flex-shrink:0;margin-top:5px}
-.feeding-visual{background:linear-gradient(145deg,var(--ice),rgba(85,124,141,.2));border-radius:4px;padding:40px;display:flex;align-items:center;justify-content:center;font-size:56px;min-height:220px}
+.feeding-visual{border-radius:4px;overflow:hidden;min-height:220px;border:1px solid var(--border)}
+.feeding-visual img{width:100%;height:100%;object-fit:cover;display:block}
 /* PROCESS */
 .process-section{padding:72px 64px;background:var(--mist);border-top:1px solid var(--border)}
 .process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:4px;margin-top:40px}
@@ -228,7 +229,9 @@
         <a href="tongue-tie-support.html" class="btn-secondary">Learn about tongue tie support →</a>
       </div>
     </div>
-    <div class="feeding-visual" style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--slate);letter-spacing:.08em">Feeding &amp; Development</div>
+    <div class="feeding-visual">
+      <img src="early-intervention-feeding-plate.jpg" alt="A balanced plate of grapes, cherry tomatoes, broccoli, hard-boiled egg, apple slices with peanut butter, and raspberries, prepared for toddler feeding therapy" loading="lazy">
+    </div>
   </div>
 </section>
 
