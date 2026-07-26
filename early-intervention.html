@@ -16,6 +16,8 @@
 .ei-intro-body strong{color:var(--ink);font-weight:500}
 .ei-intro-body a{color:var(--slate);text-decoration:underline}
 .ei-aside{display:flex;flex-direction:column;gap:16px}
+.ei-aside-photo{width:100%;aspect-ratio:3/2;border-radius:4px;overflow:hidden;border:1px solid var(--border)}
+.ei-aside-photo img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
 .ei-aside-card{background:var(--mist);border:1px solid var(--border);border-radius:4px;padding:24px 20px}
 .ei-aside-card h4{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:400;color:var(--deep);margin-bottom:8px}
 .ei-aside-card p{font-size:13px;color:var(--muted);line-height:1.7}
@@ -124,6 +126,11 @@
       { "@type": "Place", "name": "Lake Tahoe, CA" },
       { "@type": "Place", "name": "Mammoth Lakes, CA" },
       { "@type": "Place", "name": "Bishop, CA" },
+      { "@type": "Place", "name": "San Francisco, CA" },
+      { "@type": "Place", "name": "Oakland, CA" },
+      { "@type": "Place", "name": "San Jose, CA" },
+      { "@type": "Place", "name": "Berkeley, CA" },
+      { "@type": "Place", "name": "San Francisco Bay Area, CA" },
       { "@type": "State", "name": "California" }
     ],
     "founder": { "@type": "Person", "name": "Lauren O'Connor" },
@@ -161,6 +168,9 @@
       </ul>
     </div>
     <div class="ei-aside">
+      <div class="ei-aside-photo">
+        <img src="early-intervention-photo.jpg" alt="Toddler taking independent steps outdoors on a garden path" loading="lazy">
+      </div>
       <div class="ei-aside-card">
         <h4>Ages served</h4>
         <p>Birth through 4 years of age. For children under 3, free Regional Center services are also available — Lauren can help you navigate both options.</p>
@@ -255,7 +265,7 @@
 <div class="telehealth-band">
   <div>
     <h3>Available throughout California via telehealth</h3>
-    <p>All Early Intervention Parent/Caregiver Coaching sessions are available via secure HIPAA-compliant video for California residents. No need to travel — sessions happen where your family is most comfortable.</p>
+    <p>All Early Intervention Parent/Caregiver Coaching sessions are available via secure HIPAA-compliant video for California residents. No need to travel — sessions happen where your family is most comfortable. <a href="telehealth-bay-area.html" style="color:var(--mist);text-decoration:underline">See how this works for Bay Area families →</a></p>
   </div>
   <a href="https://triplepointspeechtherapy.janeapp.com/" class="btn-light" target="_blank" rel="noopener">Book a consultation</a>
 </div>

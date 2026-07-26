@@ -9,6 +9,7 @@ function renderNav(activePage) {
       { href: 'early-intervention.html', label: 'Early Intervention Coaching' },
       { href: 'tongue-tie-support.html', label: 'Tongue Tie Support' },
       { href: 'speech-therapy.html', label: 'Speech Therapy' },
+      { href: 'telehealth-bay-area.html', label: 'Telehealth — Bay Area' },
     ]},
     { href: 'about.html',    label: 'About',    key: 'about' },
     { href: 'faq.html',      label: 'FAQ',      key: 'faq' },
@@ -85,6 +86,7 @@ function renderFooter() {
         <a href="early-intervention.html">Early Intervention Coaching</a>
         <a href="tongue-tie-support.html">Tongue Tie Support</a>
         <a href="speech-therapy.html">Speech Therapy</a>
+        <a href="telehealth-bay-area.html">Telehealth — Bay Area</a>
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
