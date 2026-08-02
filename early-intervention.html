@@ -28,6 +28,27 @@
 .ei-list li{font-size:14px;color:var(--muted);padding:7px 0;border-bottom:1px solid var(--border);display:flex;gap:10px;align-items:baseline;line-height:1.55}
 .ei-list li:last-child{border-bottom:none}
 .ei-list li::before{content:'';color:var(--steel);font-size:7px;flex-shrink:0;margin-top:3px}
+/* PROACTIVE / NO CONCERNS */
+.pro-section{padding:64px;background:var(--mist);border-top:1px solid var(--border)}
+.pro-card{background:var(--white);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:4px;padding:38px 40px}
+.pro-card .eyebrow{margin-bottom:12px}
+.pro-card h2{font-family:'Cormorant Garamond',serif;font-size:clamp(24px,2.6vw,32px);font-weight:300;color:var(--deep);line-height:1.2;margin-bottom:16px}
+.pro-card h2 em{font-style:italic;color:var(--slate)}
+.pro-body{max-width:min(660px,100%)}
+.pro-body p{font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:15px}
+.pro-body strong{color:var(--ink);font-weight:500}
+.pro-covers{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-top:28px;padding-top:28px;border-top:1px solid var(--border)}
+.pro-cov h4{font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--slate);margin-bottom:7px}
+.pro-cov p{font-size:13px;color:var(--muted);line-height:1.7}
+@media(max-width:900px){
+  .pro-section{padding:48px 24px}
+  .pro-card{padding:28px 24px}
+}
+@media(max-width:768px){
+  .pro-section{padding:28px 20px}
+  .pro-card{padding:24px 20px}
+  .pro-covers{grid-template-columns:1fr;gap:18px}
+}
 /* COACHING MODEL */
 .coaching-section{padding:72px 64px;background:var(--mist);border-top:1px solid var(--border)}
 .coaching-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:36px}
@@ -186,6 +207,37 @@
       </div>
       <div style="margin-top:4px">
         <a href="https://triplepointspeechtherapy.janeapp.com/" class="btn-primary" target="_blank" rel="noopener" style="display:block;text-align:center">Book a free consultation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROACTIVE / NO CONCERNS -->
+<section class="pro-section">
+  <div class="pro-card">
+    <div class="eyebrow">No concerns? Still worth a conversation</div>
+    <h2>You don't need a problem <em>to benefit from guidance.</em></h2>
+    <div class="pro-body">
+      <p>Many families come to Lauren without a specific worry. Their child is meeting milestones and eating well — they simply want to understand how their child's <strong>airway, jaw, and facial structure are developing</strong>, and what small adjustments now could support healthier growth later.</p>
+      <p>That timing matters. The face and airway develop most rapidly in the earliest years of life, which is exactly when everyday habits — mouth breathing, thumb sucking, prolonged pacifier or bottle use, how a child chews and swallows — have the greatest influence on how the jaw and airway take shape. Patterns that are straightforward to redirect at two can be considerably harder to change at ten.</p>
+      <p>A consultation is simply a chance to understand <strong>what's typical, what's worth keeping an eye on, and what's worth acting on now</strong> — with no assumption that anything is wrong.</p>
+    </div>
+    <div class="pro-covers">
+      <div class="pro-cov">
+        <h4>Breathing &amp; resting posture</h4>
+        <p>Whether your child is breathing through the nose consistently, and how their lips and tongue rest at rest and during sleep.</p>
+      </div>
+      <div class="pro-cov">
+        <h4>Oral habits</h4>
+        <p>Practical guidance on thumb sucking, pacifier and bottle weaning, and chewing habits — including when they matter and when they don't.</p>
+      </div>
+      <div class="pro-cov">
+        <h4>Feeding transitions</h4>
+        <p>Support through the shifts that shape oral development: breast or bottle to solids, and building a varied, well-tolerated diet.</p>
+      </div>
+      <div class="pro-cov">
+        <h4>What to watch for</h4>
+        <p>A clear sense of the signs worth revisiting as your child grows, and when it makes sense to involve your dentist, pediatrician, or ENT.</p>
       </div>
     </div>
   </div>
