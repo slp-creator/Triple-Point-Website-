@@ -94,7 +94,6 @@ function renderFooter() {
         <a href="mailto:SLP@triplepointspeechtherapy.com">SLP@triplepointspeechtherapy.com</a>
         <p style="margin-top:6px;font-size:12px;opacity:.85"><a href="tel:+15303625983">Phone: (530) 362-5983</a></p>
         <p style="margin-top:4px;font-size:12px;opacity:.7">Fax: (530) 316-8762</p>
-        <p style="margin-top:10px;font-size:11px;opacity:.6">Serving Truckee, Mammoth Lakes,<br>Bishop &amp; all of California via telehealth</p>
       </div>
     </footer>
     <div class="footer-bottom">
