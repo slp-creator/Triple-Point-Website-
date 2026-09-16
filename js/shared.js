@@ -1,3 +1,20 @@
+// ── Google Analytics 4 ──
+// Paste your GA4 Measurement ID below — it looks like 'G-XXXXXXXXXX'.
+// While this is empty, no analytics script loads and nothing is tracked.
+const GA_MEASUREMENT_ID = '';
+
+(function initAnalytics() {
+  if (!GA_MEASUREMENT_ID) return;
+  const tag = document.createElement('script');
+  tag.async = true;
+  tag.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_MEASUREMENT_ID;
+  document.head.appendChild(tag);
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function gtag() { window.dataLayer.push(arguments); };
+  window.gtag('js', new Date());
+  window.gtag('config', GA_MEASUREMENT_ID);
+})();
+
 const LOGO_PATH = '';
 const BOOKING_URL = 'https://triplepointspeechtherapy.janeapp.com/';
 
