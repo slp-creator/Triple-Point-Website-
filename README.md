@@ -60,11 +60,40 @@ changes.
 
 ---
 
+## Changing the nav or footer
+
+The nav and footer markup lives **inside each `.html` file**, between
+`<!-- nav:start -->` / `<!-- nav:end -->` and `<!-- footer:start -->` /
+`<!-- footer:end -->` markers. Crawlers need to see the site's internal links
+without running JavaScript, so the markup ships in the HTML rather than being
+injected at runtime.
+
+Do **not** hand-edit those regions in ten files. Edit the templates in
+`tools/build-shared.js`, then run:
+
+```bash
+node tools/build-shared.js
+```
+
+and commit the resulting HTML changes. This is not a build step — the repo
+still contains exactly what gets served. It is a maintenance tool you run only
+when the nav or footer changes.
+
+`js/shared.js` now holds only *behavior* (dropdown hover, mobile menu toggle,
+the scrolled-nav class, and the Google Analytics loader). Editing markup there
+will no longer change anything on the site.
+
+---
+
 ## Repo layout
 
 Static files at the repo root (`index.js` is not a Worker here — the site is
 plain HTML/CSS/JS). Notable pages include `index.html`, `about.html`, service
 pages, `contact.html`, `faq.html`, plus `css/`, `js/`, images, and `sitemap.xml`.
+`tools/` holds maintenance scripts. Note that `wrangler.jsonc` serves the whole
+repo root, so `tools/`, this README, and `wrangler.jsonc` are all publicly
+reachable. None contain secrets, but an `.assetsignore` would keep them out of
+the deploy if that is ever wanted. See "Changing the nav or footer" above.
 
 ---
 
