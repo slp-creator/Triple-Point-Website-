@@ -51,7 +51,7 @@ const NAV_ITEMS = [
   { href: 'contact.html', label: 'Contact', key: 'contact' },
 ];
 
-const DROPDOWN_LINK_STYLE = "display:block;padding:9px 16px;font-size:13px;color:var(--muted);border-bottom:1px solid var(--border);text-decoration:none;transition:background .15s";
+const DROPDOWN_LINK_STYLE = "display:block;padding:10px 16px;font-size:14px;color:var(--muted);border-bottom:1px solid var(--border);text-decoration:none;transition:background .15s";
 
 function navLinks(activePage) {
   return NAV_ITEMS.map(p => {
@@ -112,8 +112,8 @@ function footerHtml() {
     <h4>Contact</h4>
     <p>10775 Pioneer Trail, Suite 216a<br>Truckee, CA 96161</p>
     <a href="mailto:SLP@triplepointspeechtherapy.com">SLP@triplepointspeechtherapy.com</a>
-    <p style="margin-top:6px;font-size:12px;opacity:.85"><a href="tel:+15303625983">Phone: (530) 362-5983</a></p>
-    <p style="margin-top:4px;font-size:12px;opacity:.7">Fax: (530) 316-8762</p>
+    <p style="margin-top:6px;font-size:14px;opacity:.9"><a href="tel:+15303625983">Phone: (530) 362-5983</a></p>
+    <p style="margin-top:4px;font-size:14px;opacity:.85">Fax: (530) 316-8762</p>
   </div>
 </footer>
 <div class="footer-bottom">
