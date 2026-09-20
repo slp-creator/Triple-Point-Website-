@@ -47,16 +47,8 @@
 .section-h2{font-family:'Cormorant Garamond',serif;font-size:29px;font-weight:300;color:var(--deep);line-height:1.15;margin-bottom:8px}
 .section-h2 em{font-style:italic;color:var(--slate)}
 .section-intro{font-size:16.5px;color:var(--muted);line-height:1.75;max-width:540px;margin-bottom:24px}
-.sym-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:4px;margin-bottom:24px}
-.sym-group{background:var(--white);padding:16px 14px;min-width:0}
-.sym-title{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:500;color:var(--deep);margin-bottom:10px}
-.sym-list{list-style:none}
-.sym-list li{font-size:15px;color:var(--muted);padding:4px 0;border-bottom:1px solid rgba(85,124,141,.06);display:flex;gap:6px;line-height:1.4;word-break:break-word}
-.sym-list li:last-child{border-bottom:none}
-.sym-list li::before{content:'—';color:var(--steel);font-size:8px;flex-shrink:0;margin-top:2px}
 .sym-cta{background:var(--mist);border:1px solid var(--border);border-radius:4px;padding:28px 32px}
 .sym-cta h3{font-family:'Cormorant Garamond',serif;font-size:23px;font-weight:300;color:var(--deep);margin-bottom:8px}
-.sym-cta-text p{font-size:16px;color:var(--muted);line-height:1.75}
 
 /* ── TRIPLE POINT ── */
 .triple-point-section{padding:72px 64px;background:var(--deep);text-align:center}
@@ -115,10 +107,6 @@
   .symptoms{padding:32px 20px}
   .section-h2{font-size:24px}
   .section-intro{font-size:15.5px}
-  .sym-grid{grid-template-columns:1fr !important;gap:0}
-  .sym-group{border-bottom:1px solid var(--border)}
-  .sym-group:last-child{border-bottom:none}
-  .sym-title{font-size:16px}
   .sym-cta{padding:20px}
   .sym-cta h3{font-size:20px}
 
@@ -446,25 +434,6 @@
 
   /* Symptoms — single column, ALL 5 visible */
   section.symptoms { padding: 24px 16px !important; }
-  div.sym-grid {
-    display: flex !important;
-    flex-direction: column !important;
-    width: 100% !important;
-    overflow: visible !important;
-    gap: 0 !important;
-    background: rgba(85,124,141,0.18) !important;
-    border-radius: 4px !important;
-  }
-  div.sym-group {
-    display: block !important;
-    width: 100% !important;
-    min-width: 0 !important;
-    border-bottom: 1px solid rgba(85,124,141,0.18) !important;
-    padding: 14px 16px !important;
-    background: #FAFCFD !important;
-    margin: 0 0 1px 0 !important;
-  }
-  div.sym-group:last-child { border-bottom: none !important; margin-bottom: 0 !important; }
 
   /* Services — single column */
   section.services-teaser { padding: 24px 16px !important; }
@@ -516,9 +485,6 @@
 
   /* SYMPTOMS — force block layout so all 5 show */
   .symptoms { padding: 28px 16px !important; }
-  .sym-grid { display: block !important; overflow: visible !important; width: 100% !important; }
-  .sym-group { display: block !important; width: 100% !important; border-bottom: 1px solid rgba(85,124,141,0.18) !important; padding: 14px 16px !important; background: #FAFCFD !important; }
-  .sym-group:last-child { border-bottom: none !important; }
 
   /* TRIPLE POINT */
   .triple-point-section { padding: 36px 16px !important; }
