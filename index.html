@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="css/style.css">
 <style>
 /* ── VARIABLES ── */
-:root{--deep:#2C4F5E;--slate:#557C8D;--steel:#8BBACA;--ice:#D8EBF0;--mist:#EEF6F8;--white:#FAFCFD;--ink:#1A2B33;--muted:#5A7480;--border:rgba(85,124,141,0.18);--gold:#B8956A;--nav-h:56px}
+:root{--deep:#2C4F5E;--slate:#456878;--steel:#8BBACA;--ice:#D8EBF0;--mist:#EEF6F8;--white:#FAFCFD;--ink:#1A2B33;--muted:#506A76;--border:rgba(85,124,141,0.18);--gold:#B8956A;--nav-h:56px}
 
 /* ── HERO ── */
 .hero{display:grid;grid-template-columns:1fr 1fr;min-height:420px;position:relative;overflow:hidden}
@@ -18,10 +18,10 @@
 .hero-left{display:flex;flex-direction:column;justify-content:center;padding:56px 48px 56px 64px;position:relative;z-index:1}
 .hero-h1{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,3.2vw,44px);font-weight:300;line-height:1.1;color:var(--deep);margin-bottom:14px}
 .hero-h1 em{font-style:italic;color:var(--slate)}
-.hero-sub{font-size:14px;line-height:1.8;color:var(--muted);max-width:360px;margin-bottom:24px}
+.hero-sub{font-size:15.5px;line-height:1.8;color:var(--muted);max-width:360px;margin-bottom:24px}
 .hero-right{position:relative;display:flex;align-items:center;justify-content:center;padding:56px 48px;background:rgba(139,186,202,.04)}
 .hero-badges{display:flex;gap:20px;margin-top:20px;flex-wrap:wrap}
-.hero-badge{font-size:11px;color:var(--slate);font-weight:500;display:flex;align-items:center;gap:6px}
+.hero-badge{font-size:12.5px;color:var(--slate);font-weight:500;display:flex;align-items:center;gap:6px}
 .hero-badge::before{content:'◆';font-size:6px;color:var(--steel)}
 
 /* ── HERO IMAGE ── */
@@ -29,34 +29,34 @@
 .hero-img-frame::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 55%,rgba(44,79,94,.65) 100%);z-index:1}
 .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
 .hero-img-caption{position:absolute;bottom:0;left:0;right:0;z-index:2;padding:14px 16px}
-.hero-name{display:block;font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--mist)}
-.hero-cred{display:block;font-size:8px;color:rgba(216,235,240,.75);letter-spacing:.06em;text-transform:uppercase;margin-top:3px}
+.hero-name{display:block;font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--mist)}
+.hero-cred{display:block;font-size:10px;color:rgba(216,235,240,.75);letter-spacing:.06em;text-transform:uppercase;margin-top:3px}
 .hero-stat{position:absolute;bottom:48px;left:6px;background:var(--white);border:1px solid rgba(85,124,141,.18);border-radius:4px;padding:10px 14px;box-shadow:0 6px 20px rgba(44,79,94,.1);z-index:3}
 .hero-stat-num{font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--deep);font-weight:300;line-height:1}
-.hero-stat-lbl{font-size:9px;color:var(--muted);margin-top:3px;line-height:1.3}
+.hero-stat-lbl{font-size:11px;color:var(--muted);margin-top:3px;line-height:1.3}
 
 /* ── TRUST BAR ── */
 .trust-bar{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--mist)}
 .trust-item{padding:14px 18px;border-right:1px solid var(--border)}
 .trust-item:last-child{border-right:none}
-.trust-val{font-family:'Cormorant Garamond',serif;font-size:13px;font-weight:500;color:var(--deep)}
-.trust-lbl{font-size:10px;color:var(--muted);margin-top:3px;line-height:1.4}
+.trust-val{font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:500;color:var(--deep)}
+.trust-lbl{font-size:12px;color:var(--muted);margin-top:3px;line-height:1.4}
 
 /* ── SYMPTOMS ── */
 .symptoms{padding:64px 64px;background:var(--white)}
-.section-h2{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:300;color:var(--deep);line-height:1.15;margin-bottom:8px}
+.section-h2{font-family:'Cormorant Garamond',serif;font-size:29px;font-weight:300;color:var(--deep);line-height:1.15;margin-bottom:8px}
 .section-h2 em{font-style:italic;color:var(--slate)}
-.section-intro{font-size:13px;color:var(--muted);line-height:1.75;max-width:540px;margin-bottom:24px}
+.section-intro{font-size:15px;color:var(--muted);line-height:1.75;max-width:540px;margin-bottom:24px}
 .sym-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:4px;margin-bottom:24px}
 .sym-group{background:var(--white);padding:16px 14px;min-width:0}
-.sym-title{font-family:'Cormorant Garamond',serif;font-size:14px;font-weight:500;color:var(--deep);margin-bottom:10px}
+.sym-title{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:500;color:var(--deep);margin-bottom:10px}
 .sym-list{list-style:none}
-.sym-list li{font-size:11px;color:var(--muted);padding:4px 0;border-bottom:1px solid rgba(85,124,141,.06);display:flex;gap:6px;line-height:1.4;word-break:break-word}
+.sym-list li{font-size:13.5px;color:var(--muted);padding:4px 0;border-bottom:1px solid rgba(85,124,141,.06);display:flex;gap:6px;line-height:1.4;word-break:break-word}
 .sym-list li:last-child{border-bottom:none}
 .sym-list li::before{content:'—';color:var(--steel);font-size:8px;flex-shrink:0;margin-top:2px}
 .sym-cta{background:var(--mist);border:1px solid var(--border);border-radius:4px;padding:28px 32px}
-.sym-cta h3{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;color:var(--deep);margin-bottom:8px}
-.sym-cta-text p{font-size:13px;color:var(--muted);line-height:1.75}
+.sym-cta h3{font-family:'Cormorant Garamond',serif;font-size:23px;font-weight:300;color:var(--deep);margin-bottom:8px}
+.sym-cta-text p{font-size:15px;color:var(--muted);line-height:1.75}
 
 /* ── TRIPLE POINT ── */
 .triple-point-section{padding:72px 64px;background:var(--deep);text-align:center}
@@ -76,18 +76,18 @@
 .service-card{background:var(--mist);border:1px solid var(--border);border-radius:4px;overflow:hidden;cursor:pointer;transition:border-color .2s,transform .2s}
 .service-card:hover{border-color:var(--slate);transform:translateY(-3px)}
 .sc-label{width:100%;height:70px;display:flex;align-items:center;justify-content:center;background:var(--mist);border-bottom:1px solid var(--border)}
-.sc-label span{font-family:'Cormorant Garamond',serif;font-size:12px;color:var(--slate);letter-spacing:.07em;text-transform:uppercase}
+.sc-label span{font-family:'Cormorant Garamond',serif;font-size:13px;color:var(--slate);letter-spacing:.07em;text-transform:uppercase}
 .sc-body{padding:16px}
-.sc-body h3{font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:500;color:var(--deep);margin-bottom:6px}
-.sc-body p{font-size:12px;color:var(--muted);line-height:1.6}
-.sc-link{font-size:10px;color:var(--slate);font-weight:500;letter-spacing:.04em;margin-top:8px;display:block}
+.sc-body h3{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:500;color:var(--deep);margin-bottom:6px}
+.sc-body p{font-size:13.5px;color:var(--muted);line-height:1.6}
+.sc-link{font-size:12px;color:var(--slate);font-weight:500;letter-spacing:.04em;margin-top:8px;display:block}
 
 /* ── EYEBROW ── */
-.eyebrow{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--slate);display:flex;align-items:center;gap:8px;margin-bottom:14px}
+.eyebrow{font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--slate);display:flex;align-items:center;gap:8px;margin-bottom:14px}
 .eyebrow::before{content:'';width:16px;height:1px;background:var(--slate)}
 
 /* ── HERO BADGE ── */
-.hero-badge{font-size:11px;color:var(--slate);font-weight:500;display:flex;align-items:center;gap:6px}
+.hero-badge{font-size:12.5px;color:var(--slate);font-weight:500;display:flex;align-items:center;gap:6px}
 .hero-badge::before{content:'◆';font-size:6px;color:var(--steel)}
 
 /* ── MOBILE ── */
@@ -98,9 +98,9 @@
   .hero-stat{position:static;display:inline-block;margin-top:10px;box-shadow:none}
   .hero-left{padding:32px 20px 28px}
   .hero-h1{font-size:26px;line-height:1.15}
-  .hero-sub{max-width:100%;font-size:13px}
+  .hero-sub{max-width:100%;font-size:15px}
   .hero-badges{gap:10px;margin-top:12px;flex-wrap:wrap}
-  .hero-badge{font-size:10px}
+  .hero-badge{font-size:12px}
   .hero-ctas{flex-direction:column}
   .hero-ctas a{display:block;text-align:center;width:100%}
 
@@ -109,22 +109,22 @@
   .trust-item:nth-child(2){border-right:none}
   .trust-item:nth-child(3){border-top:none}
   .trust-item:nth-child(4){border-right:none;border-bottom:none}
-  .trust-val{font-size:11px}
-  .trust-lbl{font-size:9px}
+  .trust-val{font-size:14px}
+  .trust-lbl{font-size:11.5px}
 
   .symptoms{padding:32px 20px}
-  .section-h2{font-size:20px}
-  .section-intro{font-size:12px}
+  .section-h2{font-size:24px}
+  .section-intro{font-size:14.5px}
   .sym-grid{grid-template-columns:1fr !important;gap:0}
   .sym-group{border-bottom:1px solid var(--border)}
   .sym-group:last-child{border-bottom:none}
-  .sym-title{font-size:14px}
+  .sym-title{font-size:16px}
   .sym-cta{padding:20px}
-  .sym-cta h3{font-size:16px}
+  .sym-cta h3{font-size:20px}
 
   .triple-point-section{padding:40px 20px}
   .triple-point-inner{max-width:100%}
-  .tp-definition{font-size:12px}
+  .tp-definition{font-size:14px}
   .tp-tagline{font-size:28px}
 
   .about-preview{padding:32px 20px}
@@ -134,7 +134,7 @@
   .services-grid{grid-template-columns:1fr !important;gap:12px}
   .sc-label{height:44px}
 
-  .eyebrow{font-size:8px}
+  .eyebrow{font-size:10.5px}
 }
 </style>
   <meta property="og:title" content="Myofunctional &amp; Speech Therapy | Truckee &amp; Lake Tahoe, CA">
