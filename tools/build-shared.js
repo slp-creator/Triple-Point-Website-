@@ -47,6 +47,7 @@ const NAV_ITEMS = [
   ]},
   { href: 'about.html', label: 'About', key: 'about' },
   { href: 'faq.html', label: 'FAQ', key: 'faq' },
+  { href: 'resources.html', label: 'Resources', key: 'resources' },
   { href: 'contact.html', label: 'Contact', key: 'contact' },
 ];
 
