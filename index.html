@@ -47,6 +47,13 @@
 .section-h2{font-family:'Cormorant Garamond',serif;font-size:29px;font-weight:300;color:var(--deep);line-height:1.15;margin-bottom:8px}
 .section-h2 em{font-style:italic;color:var(--slate)}
 .section-intro{font-size:16.5px;color:var(--muted);line-height:1.75;max-width:540px;margin-bottom:24px}
+.sym-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:4px;overflow:hidden;margin-bottom:24px}
+.sym-group{background:var(--white);padding:14px 14px;min-width:0}
+.sym-title{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:500;color:var(--deep);margin:0 0 10px}
+.sym-list{list-style:none;padding:0;margin:0}
+.sym-list li{font-size:15px;color:var(--muted);padding:5px 0;border-bottom:1px solid rgba(85,124,141,.06);display:flex;gap:6px;line-height:1.5}
+.sym-list li:last-child{border-bottom:none}
+.sym-list li::before{content:'\2014';color:var(--steel);flex-shrink:0}
 .sym-cta{background:var(--mist);border:1px solid var(--border);border-radius:4px;padding:28px 32px}
 .sym-cta h3{font-family:'Cormorant Garamond',serif;font-size:23px;font-weight:300;color:var(--deep);margin-bottom:8px}
 
@@ -83,6 +90,9 @@
 .hero-badge::before{content:'◆';font-size:6px;color:var(--steel)}
 
 /* ── MOBILE ── */
+@media(max-width:700px){
+  .sym-grid{grid-template-columns:1fr}
+}
 @media(max-width:768px){
   .hero{grid-template-columns:1fr;min-height:auto}
   .hero-right{display:block;padding:0 20px 28px;background:none}
@@ -234,64 +244,59 @@
   <div class="eyebrow">Do any of these sound familiar?</div>
   <h2 class="section-h2">Orofacial myofunctional disorders are more common <em>than most people realize.</em></h2>
   <p class="section-intro">The symptoms below can appear in isolation or together. If several resonate with you or your child, a myofunctional evaluation may help identify the underlying cause.</p>
-  <table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;border:1px solid rgba(85,124,141,0.18);border-radius:4px;margin-bottom:24px">
-  <tr class="sym-table-desktop" style="display:table-row">
-    <td valign="top" style="padding:14px 12px;border-right:1px solid rgba(85,124,141,0.18);vertical-align:top;min-width:0">
-      <div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:500;color:#2C4F5E;margin-bottom:9px">Sleep &amp; Breathing</div>
-      <ul style="padding:0;margin:0"><li style="font-size:15px;color:#455E69;padding:3px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:5px;line-height:1.4;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>Mouth breathing or open-mouth resting posture</li><li style="font-size:15px;color:#455E69;padding:3px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:5px;line-height:1.4;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>Snoring or sleep apnea</li><li style="font-size:15px;color:#455E69;padding:3px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:5px;line-height:1.4;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>Restless sleep, night sweats, or feeling unrested</li><li style="font-size:15px;color:#455E69;padding:3px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:5px;line-height:1.4;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>Chronic nasal congestion</li><li style="font-size:15px;color:#455E69;padding:3px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:5px;line-height:1.4;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>In children: bedwetting or night terrors</li></ul>
-    </td>
-    <td valign="top" style="padding:14px 12px;border-right:1px solid rgba(85,124,141,0.18);vertical-align:top;min-width:0">
-      <div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:500;color:#2C4F5E;margin-bottom:9px">Dental &amp; Jaw</div>
-      <ul style="padding:0;margin:0"><li style="font-size:15px;color:#455E69;padding:3px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:5px;line-height:1.4;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>Tongue tie or lip tie</li><li style="font-size:15px;color:#455E69;padding:3px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:5px;line-height:1.4;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>Crowded teeth or malocclusion</li><li style="font-size:15px;color:#455E69;padding:3px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:5px;line-height:1.4;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>Orthodontic relapse after braces</li><li style="font-size:15px;color:#455E69;padding:3px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:5px;line-height:1.4;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>TMJ pain, clicking, or jaw tension</li><li style="font-size:15px;color:#455E69;padding:3px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:5px;line-height:1.4;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>Bruxism (clenching or grinding)</li></ul>
-    </td>
-    <td valign="top" style="padding:14px 12px;border-right:1px solid rgba(85,124,141,0.18);vertical-align:top;min-width:0">
-      <div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:500;color:#2C4F5E;margin-bottom:9px">Eating &amp; Swallowing</div>
-      <ul style="padding:0;margin:0"><li style="font-size:15px;color:#455E69;padding:3px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:5px;line-height:1.4;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>Difficulty swallowing food, liquids, or pills</li><li style="font-size:15px;color:#455E69;padding:3px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:5px;line-height:1.4;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>Texture aversions or picky eating</li><li style="font-size:15px;color:#455E69;padding:3px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:5px;line-height:1.4;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>Chronic acid reflux or digestive issues</li><li style="font-size:15px;color:#455E69;padding:3px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:5px;line-height:1.4;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>In infants: poor latch, slow weight gain</li><li style="font-size:15px;color:#455E69;padding:3px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:5px;line-height:1.4;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>Slow or messy eating</li></ul>
-    </td>
-    <td valign="top" style="padding:14px 12px;border-right:1px solid rgba(85,124,141,0.18);vertical-align:top;min-width:0">
-      <div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:500;color:#2C4F5E;margin-bottom:9px">Speech &amp; Oral Habits</div>
-      <ul style="padding:0;margin:0"><li style="font-size:15px;color:#455E69;padding:3px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:5px;line-height:1.4;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>Articulation errors or unclear speech</li><li style="font-size:15px;color:#455E69;padding:3px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:5px;line-height:1.4;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>Thumb sucking, nail biting, object chewing</li><li style="font-size:15px;color:#455E69;padding:3px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:5px;line-height:1.4;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>Prolonged pacifier or bottle use</li><li style="font-size:15px;color:#455E69;padding:3px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:5px;line-height:1.4;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>Excessive drooling</li><li style="font-size:15px;color:#455E69;padding:3px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:5px;line-height:1.4;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>Speech or language delay in toddlers</li></ul>
-    </td>
-    <td valign="top" style="padding:14px 12px;border-right:1px solid rgba(85,124,141,0.18);vertical-align:top;min-width:0">
-      <div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:500;color:#2C4F5E;margin-bottom:9px">Head &amp; Neck</div>
-      <ul style="padding:0;margin:0"><li style="font-size:15px;color:#455E69;padding:3px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:5px;line-height:1.4;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>Frequent headaches or migraines</li><li style="font-size:15px;color:#455E69;padding:3px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:5px;line-height:1.4;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>Chronic neck and shoulder tension</li><li style="font-size:15px;color:#455E69;padding:3px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:5px;line-height:1.4;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>Recurring ear, sinus, or throat infections</li><li style="font-size:15px;color:#455E69;padding:3px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:5px;line-height:1.4;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>Hypersensitive gag reflex</li><li style="font-size:15px;color:#455E69;padding:3px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:5px;line-height:1.4;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>Facial asymmetry</li></ul>
-    </td>
-  </tr>
-</table>
-
-<!-- MOBILE SYMPTOMS — shown only on phones -->
-<div class="sym-mobile" style="display:none;border:1px solid rgba(85,124,141,0.18);border-radius:4px;margin-bottom:24px;overflow:hidden">
-  <div style="padding:14px 16px;border-bottom:1px solid rgba(85,124,141,0.18);background:#FAFCFD">
-    <div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:500;color:#2C4F5E;margin-bottom:10px">Sleep &amp; Breathing</div>
-    <ul style="padding:0;margin:0"><li style="font-size:15px;color:#455E69;padding:5px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:6px;line-height:1.5;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>Mouth breathing or open-mouth resting posture</li><li style="font-size:15px;color:#455E69;padding:5px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:6px;line-height:1.5;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>Snoring or sleep apnea</li><li style="font-size:15px;color:#455E69;padding:5px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:6px;line-height:1.5;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>Restless sleep, night sweats, or feeling unrested</li><li style="font-size:15px;color:#455E69;padding:5px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:6px;line-height:1.5;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>Chronic nasal congestion</li><li style="font-size:15px;color:#455E69;padding:5px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:6px;line-height:1.5;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>In children: bedwetting or night terrors</li></ul>
+<div class="sym-grid">
+  <div class="sym-group">
+    <h3 class="sym-title">Sleep &amp; Breathing</h3>
+    <ul class="sym-list">
+      <li>Mouth breathing or open-mouth resting posture</li>
+      <li>Snoring or sleep apnea</li>
+      <li>Restless sleep, night sweats, or feeling unrested</li>
+      <li>Chronic nasal congestion</li>
+      <li>In children: bedwetting or night terrors</li>
+    </ul>
   </div>
-  <div style="padding:14px 16px;border-bottom:1px solid rgba(85,124,141,0.18);background:#FAFCFD">
-    <div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:500;color:#2C4F5E;margin-bottom:10px">Dental &amp; Jaw</div>
-    <ul style="padding:0;margin:0"><li style="font-size:15px;color:#455E69;padding:5px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:6px;line-height:1.5;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>Tongue tie or lip tie</li><li style="font-size:15px;color:#455E69;padding:5px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:6px;line-height:1.5;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>Crowded teeth or malocclusion</li><li style="font-size:15px;color:#455E69;padding:5px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:6px;line-height:1.5;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>Orthodontic relapse after braces</li><li style="font-size:15px;color:#455E69;padding:5px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:6px;line-height:1.5;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>TMJ pain, clicking, or jaw tension</li><li style="font-size:15px;color:#455E69;padding:5px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:6px;line-height:1.5;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>Bruxism (clenching or grinding)</li></ul>
+  <div class="sym-group">
+    <h3 class="sym-title">Dental &amp; Jaw</h3>
+    <ul class="sym-list">
+      <li>Tongue tie or lip tie</li>
+      <li>Crowded teeth or malocclusion</li>
+      <li>Orthodontic relapse after braces</li>
+      <li>TMJ pain, clicking, or jaw tension</li>
+      <li>Bruxism (clenching or grinding)</li>
+    </ul>
   </div>
-  <div style="padding:14px 16px;border-bottom:1px solid rgba(85,124,141,0.18);background:#FAFCFD">
-    <div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:500;color:#2C4F5E;margin-bottom:10px">Eating &amp; Swallowing</div>
-    <ul style="padding:0;margin:0"><li style="font-size:15px;color:#455E69;padding:5px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:6px;line-height:1.5;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>Difficulty swallowing food, liquids, or pills</li><li style="font-size:15px;color:#455E69;padding:5px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:6px;line-height:1.5;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>Texture aversions or picky eating</li><li style="font-size:15px;color:#455E69;padding:5px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:6px;line-height:1.5;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>Chronic acid reflux or digestive issues</li><li style="font-size:15px;color:#455E69;padding:5px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:6px;line-height:1.5;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>In infants: poor latch, slow weight gain</li><li style="font-size:15px;color:#455E69;padding:5px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:6px;line-height:1.5;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>Slow or messy eating</li></ul>
+  <div class="sym-group">
+    <h3 class="sym-title">Eating &amp; Swallowing</h3>
+    <ul class="sym-list">
+      <li>Difficulty swallowing food, liquids, or pills</li>
+      <li>Texture aversions or picky eating</li>
+      <li>Chronic acid reflux or digestive issues</li>
+      <li>In infants: poor latch, slow weight gain</li>
+      <li>Slow or messy eating</li>
+    </ul>
   </div>
-  <div style="padding:14px 16px;border-bottom:1px solid rgba(85,124,141,0.18);background:#FAFCFD">
-    <div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:500;color:#2C4F5E;margin-bottom:10px">Speech &amp; Oral Habits</div>
-    <ul style="padding:0;margin:0"><li style="font-size:15px;color:#455E69;padding:5px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:6px;line-height:1.5;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>Articulation errors or unclear speech</li><li style="font-size:15px;color:#455E69;padding:5px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:6px;line-height:1.5;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>Thumb sucking, nail biting, object chewing</li><li style="font-size:15px;color:#455E69;padding:5px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:6px;line-height:1.5;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>Prolonged pacifier or bottle use</li><li style="font-size:15px;color:#455E69;padding:5px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:6px;line-height:1.5;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>Excessive drooling</li><li style="font-size:15px;color:#455E69;padding:5px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:6px;line-height:1.5;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>Speech or language delay in toddlers</li></ul>
+  <div class="sym-group">
+    <h3 class="sym-title">Speech &amp; Oral Habits</h3>
+    <ul class="sym-list">
+      <li>Articulation errors or unclear speech</li>
+      <li>Thumb sucking, nail biting, object chewing</li>
+      <li>Prolonged pacifier or bottle use</li>
+      <li>Excessive drooling</li>
+      <li>Speech or language delay in toddlers</li>
+    </ul>
   </div>
-  <div style="padding:14px 16px;border-bottom:1px solid rgba(85,124,141,0.18);background:#FAFCFD">
-    <div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:500;color:#2C4F5E;margin-bottom:10px">Head &amp; Neck</div>
-    <ul style="padding:0;margin:0"><li style="font-size:15px;color:#455E69;padding:5px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:6px;line-height:1.5;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>Frequent headaches or migraines</li><li style="font-size:15px;color:#455E69;padding:5px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:6px;line-height:1.5;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>Chronic neck and shoulder tension</li><li style="font-size:15px;color:#455E69;padding:5px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:6px;line-height:1.5;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>Recurring ear, sinus, or throat infections</li><li style="font-size:15px;color:#455E69;padding:5px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:6px;line-height:1.5;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>Hypersensitive gag reflex</li><li style="font-size:15px;color:#455E69;padding:5px 0;border-bottom:1px solid rgba(85,124,141,0.06);display:flex;gap:6px;line-height:1.5;list-style:none"><span style="color:#8BBACA;flex-shrink:0">—</span>Facial asymmetry</li></ul>
+  <div class="sym-group">
+    <h3 class="sym-title">Head &amp; Neck</h3>
+    <ul class="sym-list">
+      <li>Frequent headaches or migraines</li>
+      <li>Chronic neck and shoulder tension</li>
+      <li>Recurring ear, sinus, or throat infections</li>
+      <li>Hypersensitive gag reflex</li>
+      <li>Facial asymmetry</li>
+    </ul>
   </div>
 </div>
-<style>
-@media only screen and (max-width: 700px) {
-  .sym-table-desktop { display: none !important; }
-  .sym-mobile { display: block !important; }
-}
-@media only screen and (min-width: 701px) {
-  .sym-table-desktop { display: table-row !important; }
-  .sym-mobile { display: none !important; }
-}
-</style>
+
   <div class="sym-cta">
     <h3>Not sure if this applies to you?</h3>
     <p>A free 30-minute consultation is the right place to start. Lauren will help you determine whether a myofunctional evaluation is the best next step.</p>
