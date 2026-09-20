@@ -27,13 +27,19 @@
 .booking-box p{font-size:13px;color:rgba(216,235,240,.7);line-height:1.65;margin-bottom:20px}
 
 .map-section{padding:0 64px 72px;background:var(--white)}
+.review-section{padding:0 64px 72px;background:var(--white)}
+.review-box{background:var(--mist);border:1px solid var(--border);border-radius:4px;padding:40px 32px;text-align:center}
+.review-box h3{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:300;color:var(--deep);margin-bottom:10px}
+.review-box h3 em{font-style:italic;color:var(--slate)}
+.review-box p{font-size:14px;color:var(--muted);line-height:1.75;max-width:min(460px,100%);margin:0 auto 24px}
+.review-stars{font-size:15px;color:var(--gold);letter-spacing:.18em;margin-bottom:14px}
 .map-frame{background:var(--mist);border:1px solid var(--border);border-radius:4px;overflow:hidden;height:380px}
 .map-placeholder{text-align:center;color:var(--muted)}
 .map-placeholder .mp-icon{font-size:36px;margin-bottom:10px}
 .map-placeholder p{font-size:14px}
 .map-placeholder a{color:var(--slate)}
 @media(max-width:900px){
-  .contact-main,.map-section{padding:48px 24px}
+  .contact-main,.map-section,.review-section{padding:48px 24px}
   .contact-grid{grid-template-columns:1fr;gap:40px}
   
   
@@ -52,7 +58,7 @@
   .faq-layout{grid-template-columns:1fr}
   .faq-nav{display:none}
   .contact-grid{grid-template-columns:1fr}
-  .map-section{padding:0 20px 28px}
+  .map-section,.review-section{padding:0 20px 28px}
   .cta-primary-block{padding:28px 20px}
   .cta-primary-block h2{font-size:20px}
   .email-block{padding:24px 20px}
@@ -221,6 +227,32 @@
     </a>
   </div>
 </div>
+
+<!-- GOOGLE REVIEW -->
+<!--
+  TO ACTIVATE: replace REPLACE_WITH_GOOGLE_REVIEW_LINK below with your
+  Google review link, then republish. Get it from your Google Business
+  Profile: "Ask for reviews" / "Get more reviews" gives a short link that
+  looks like  https://g.page/r/XXXXXXXXXXXX/review
+  Until that placeholder is replaced, this whole section stays hidden, so
+  visitors never see a button that goes nowhere.
+-->
+<div class="review-section" id="review-section" hidden>
+  <div class="review-box">
+    <div class="review-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+    <h3>Has therapy made a difference <em>for you or your child?</em></h3>
+    <p>A short review helps other families in the Truckee and Tahoe area find care for breathing, feeding, and speech concerns. It takes about a minute.</p>
+    <a href="REPLACE_WITH_GOOGLE_REVIEW_LINK" class="btn-primary" target="_blank" rel="noopener">Leave a Google review</a>
+  </div>
+</div>
+<script>
+// Safety interlock: keep the section hidden until a real review link is set.
+(function () {
+  var s = document.getElementById('review-section');
+  var a = s && s.querySelector('a');
+  if (a && a.getAttribute('href').indexOf('REPLACE_WITH') === -1) s.hidden = false;
+})();
+</script>
 
 <!-- footer:start -->
 <footer>
