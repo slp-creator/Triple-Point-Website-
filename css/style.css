@@ -13,7 +13,7 @@
   --nav-h:72px;
 }
 html{scroll-behavior:smooth}
-body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--ink);overflow-x:hidden;font-size:16px;font-weight:400;line-height:1.65;padding-top:var(--nav-h)}
+body{font-family:'IBM Plex Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--white);color:var(--ink);overflow-x:hidden;font-size:16px;font-weight:400;line-height:1.65;padding-top:var(--nav-h)}
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 #main-nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 56px;height:var(--nav-h);background:rgba(250,252,253,0.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);transition:box-shadow .3s}
@@ -35,11 +35,11 @@ a{color:inherit;text-decoration:none}
 .nav-mobile.open{display:flex}
 .nav-mobile a{padding:13px 0;border-bottom:1px solid var(--border);font-size:15px;color:var(--muted)}
 .nav-book-mobile{margin-top:16px;background:var(--deep)!important;color:var(--white)!important;padding:14px!important;border-radius:2px;text-align:center;font-size:13px;font-weight:500;letter-spacing:.06em;text-transform:uppercase}
-.btn-primary{display:inline-block;background:var(--deep);color:var(--white);padding:13px 28px;border-radius:2px;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;transition:all .2s}
+.btn-primary{display:inline-block;background:var(--deep);color:var(--white);padding:13px 28px;border-radius:2px;border:none;cursor:pointer;font-family:'IBM Plex Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;transition:all .2s}
 .btn-primary:hover{background:var(--slate);transform:translateY(-1px)}
-.btn-secondary{display:inline-block;color:var(--deep);background:transparent;padding:13px 28px;border-radius:2px;border:1px solid rgba(44,79,94,.28);font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;transition:all .2s}
+.btn-secondary{display:inline-block;color:var(--deep);background:transparent;padding:13px 28px;border-radius:2px;border:1px solid rgba(44,79,94,.28);font-family:'IBM Plex Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;transition:all .2s}
 .btn-secondary:hover{border-color:var(--slate);transform:translateY(-1px)}
-.btn-light{display:inline-block;background:var(--white);color:var(--deep);padding:12px 26px;border-radius:2px;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;transition:all .2s}
+.btn-light{display:inline-block;background:var(--white);color:var(--deep);padding:12px 26px;border-radius:2px;border:none;cursor:pointer;font-family:'IBM Plex Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;transition:all .2s}
 .btn-light:hover{background:var(--ice);transform:translateY(-1px)}
 .eyebrow{font-size:11.5px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--slate);display:flex;align-items:center;gap:10px;margin-bottom:16px}
 .eyebrow::before{content:'';width:24px;height:1px;background:var(--slate)}
