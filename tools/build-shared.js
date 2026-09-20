@@ -31,6 +31,7 @@ const PAGES = {
   'telehealth-bay-area.html': 'services',
   'about.html': 'about',
   'faq.html': 'faq',
+  'resources.html': 'resources',
   'contact.html': 'contact',
   'thank-you.html': 'contact',
 };
@@ -95,6 +96,7 @@ function footerHtml() {
     <a href="index.html">Home</a>
     <a href="about.html">About Lauren</a>
     <a href="faq.html">FAQ</a>
+    <a href="resources.html">Resources &amp; Research</a>
     <a href="contact.html">Contact</a>
   </div>
   <div class="footer-col">
