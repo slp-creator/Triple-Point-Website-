@@ -20,11 +20,6 @@
 .cd-text .cd-label{font-size:13px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--slate);margin-bottom:3px}
 .cd-text .cd-value{font-size:14px;color:var(--text);line-height:1.6}
 .cd-text a{color:var(--deep);text-decoration:underline}
-.hours-table{width:100%;border-collapse:collapse;margin-top:8px}
-.hours-table tr{border-bottom:1px solid var(--border)}
-.hours-table tr:last-child{border-bottom:none}
-.hours-table td{padding:7px 0;font-size:15px;color:var(--muted)}
-.hours-table td:last-child{text-align:right;color:var(--text)}
 .booking-box{background:var(--deep);border-radius:4px;padding:32px;margin-top:32px;text-align:center}
 .booking-box h4{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-size:22px;font-weight:400;color:var(--mist);margin-bottom:8px}
 .booking-box p{font-size:15px;color:rgba(216,235,240,.7);line-height:1.65;margin-bottom:20px}
@@ -116,6 +111,12 @@
     ],
     "founder": { "@type": "Person", "name": "Lauren O'Connor" },
     "knowsAbout": ["Orofacial myofunctional therapy", "Speech-language pathology", "Early intervention", "Tongue tie and lip tie", "Sleep-disordered breathing", "TMJ dysfunction"],
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    }],
     "sameAs": [
       "https://g.page/r/Cfd1qauALYrGEBM",
       "https://www.google.com/maps?cid=14306297196954875383"
@@ -216,6 +217,12 @@
         <div class="cd-text">
           <div class="cd-label">Phone</div>
           <div class="cd-value"><a href="tel:+15303625983">(530) 362-5983</a></div>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="cd-text">
+          <div class="cd-label">Hours</div>
+          <div class="cd-value">Monday &ndash; Friday<br>9:00 a.m. &ndash; 6:00 p.m.</div>
         </div>
       </div>
       <div class="contact-detail">
