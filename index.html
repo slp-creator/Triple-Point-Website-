@@ -74,6 +74,16 @@
 .tp-definition{display:block;font-size:17px;color:rgba(216,235,240,.82);line-height:1.85;font-weight:300;margin-bottom:28px;font-style:italic;width:100%;text-align:center}
 .tp-tagline{display:block;font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-size:clamp(30px,4vw,46px);font-weight:400;color:var(--mist);letter-spacing:.04em;line-height:1.2;text-wrap:balance;width:100%;text-align:center}
 
+/* ── AIRWAY ── */
+.airway-section{padding:72px 64px;background:var(--white);border-top:1px solid var(--border)}
+.airway-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.airway-photo{width:100%;aspect-ratio:4/3;border-radius:4px;overflow:hidden;position:relative}
+.airway-photo img{width:100%;height:100%;object-fit:cover;object-position:center}
+.airway-photo-cap{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(44,79,94,.75),transparent);padding:20px 20px 16px}
+.airway-photo-cap p{font-size:13px;color:rgba(216,235,240,.85);letter-spacing:.04em}
+.airway-body p{font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:16px}
+.airway-body a{color:var(--slate);text-decoration:underline}
+
 /* ── ABOUT PREVIEW ── */
 
 /* ── SERVICES TEASER ── */
@@ -95,6 +105,8 @@
 
 /* ── MOBILE ── */
 @media(max-width:700px){
+  .airway-grid{grid-template-columns:1fr;gap:28px}
+  .airway-section{padding:40px 20px}
   .chk-wrap{grid-template-columns:1fr}
   .chk-why{min-height:0}
 }
@@ -297,6 +309,22 @@
   </div>
 </section>
 
+<!-- AIRWAY VISUAL -->
+<section class="airway-section">
+  <div class="airway-grid">
+    <div class="airway-photo">
+      <img src="airway_model.jpg" alt="Anatomical cross-section model of the upper airway — nasal passage, oral cavity, tongue and pharynx" style="width:100%;height:100%;object-fit:cover;object-position:center center">
+      <div class="airway-photo-cap"><p>Sagittal cross-section — nasal passage, oral cavity, tongue, and pharynx</p></div>
+    </div>
+    <div class="airway-body">
+      <div class="eyebrow">The airway connection</div>
+      <h2 class="section-h2">Why the tongue, lips, and jaw <em>matter so much.</em></h2>
+      <p>The upper airway is a shared space. The position of the tongue at rest, the tone of the lips, the pattern of swallowing, and the habit of nasal versus mouth breathing all directly influence the size and patency of the airway — and by extension, how well we sleep, breathe, and develop structurally.</p>
+      <p>When the tongue rests low in the mouth instead of against the palate, when swallowing pushes the tongue forward rather than upward, or when breathing habitually occurs through the mouth — the muscles of the orofacial complex gradually adapt to these dysfunctional patterns. Over time this affects the face, jaw, teeth, airway, sleep, and many other systems in the body.</p>
+      <p>Myofunctional therapy retrains these patterns at their source. See the <a href="faq.html#research">research page</a> for peer-reviewed evidence supporting OMT for sleep-disordered breathing, tongue tie, and orthodontic outcomes.</p>
+    </div>
+  </div>
+</section>
 
 <!-- SERVICES TEASER -->
 <section class="services-teaser">
