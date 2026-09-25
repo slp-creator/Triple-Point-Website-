@@ -107,10 +107,14 @@
   .omt-intro,.treat-section,.airway-section,.process-section,.multi-section,.omt-cta-section{padding:48px 24px}
   .telehealth-band{padding:36px 24px}
   .omt-intro-grid,.airway-grid,.treat-grid{grid-template-columns:1fr;gap:32px}
+  #children .treat-grid{grid-template-columns:1fr}
   .process-steps{grid-template-columns:1fr}
 }
 
 /* ── TREAT CARDS ── */
+#children{scroll-margin-top:calc(var(--nav-h) + 24px)}
+#children .treat-grid{grid-template-columns:repeat(3,1fr)}
+.proc-note a{color:var(--slate);font-weight:500;text-decoration:underline}
 .tc{background:var(--white);border:1px solid var(--border);border-radius:4px;padding:22px 20px;transition:border-color .2s}
 .tc:hover{border-color:var(--slate)}
 .tc-title{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-size:17px;font-weight:500;color:var(--deep);margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid var(--border)}
@@ -128,6 +132,7 @@
   .service-block.reverse .service-visual{order:0}
   .service-block.reverse .service-content{order:1}
   .collab-grid,.cred-badges-grid,.res-grid,.books-grid,.treat-grid,.psteps,.coaching-grid{grid-template-columns:1fr}
+  #children .treat-grid{grid-template-columns:1fr}
   .psteps{gap:1px}
   .about-main,.services-main,.faq-main,.contact-main,.intro,.treat,.process,.team,.collab,.cred-section,.resources,.research,.coaching,.feeding,.ei-main{padding:24px 20px}
   .faq-layout{grid-template-columns:1fr}
@@ -276,6 +281,44 @@
   <div class="proc-note">
     <h4>Coordinated with surgical care</h4>
     <p>Myofunctional therapy is considered best practice before and after a lip or tongue tie release, and a tonsillectomy or adenoidectomy. Whatever the starting point, the goals are consistent — restoring nasal breathing, establishing healthy chewing and swallowing, and supporting healthy facial and jaw development.</p>
+  </div>
+</section>
+
+<!-- SIGNS IN INFANTS AND CHILDREN -->
+<section class="treat-section" id="children">
+  <div class="eyebrow">For parents</div>
+  <h2 class="section-h2">The signs in infants and children <em>look different.</em></h2>
+  <p class="section-intro">Children rarely describe these symptoms &mdash; they show them. In infants the signs appear at feeding. In older children they show up in sleep, eating, and speech, and are easy to mistake for personality or a phase.</p>
+  <div class="treat-grid">
+    <div class="tc"><div class="tc-title">Infants</div><ul class="tl">
+      <li>Shallow or painful latch at breast or bottle</li>
+      <li>Clicking or smacking noises while feeding</li>
+      <li>Milk leaking from the mouth; long, tiring feeds</li>
+      <li>Reflux, colic, or frequent gassiness</li>
+      <li>Falls asleep quickly at the breast or bottle</li>
+      <li>Slow weight gain</li>
+    </ul></div>
+    <div class="tc"><div class="tc-title">Toddlers &amp; young children</div><ul class="tl">
+      <li>Mouth breathing or open-mouth resting posture</li>
+      <li>Snoring, restless sleep, or night terrors</li>
+      <li>Bedwetting</li>
+      <li>Picky eating or difficulty with textures</li>
+      <li>Prolonged pacifier, bottle, or thumb sucking</li>
+      <li>Speech sound errors or speech delay</li>
+      <li>Excessive drooling</li>
+    </ul></div>
+    <div class="tc"><div class="tc-title">School-age children</div><ul class="tl">
+      <li>Crowded teeth or early orthodontic concerns</li>
+      <li>Grinding teeth at night</li>
+      <li>Recurring ear, sinus, or throat infections</li>
+      <li>Waking unrefreshed, hyperactivity, or trouble paying attention</li>
+      <li>Headaches, neck pain, or jaw tension (TMJ)</li>
+      <li>Slow eating or packing food in the cheeks</li>
+    </ul></div>
+  </div>
+  <div class="proc-note">
+    <h4>Not sure where your child fits?</h4>
+    <p>A free 30-minute consultation is the right place to start. For infants and toddlers, <a href="early-intervention.html">early intervention coaching</a> works with you in your own routines; where a tongue or lip tie is involved, see <a href="tongue-tie-support.html">tongue tie support</a>.</p>
   </div>
 </section>
 
