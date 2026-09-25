@@ -14,13 +14,9 @@
 <style>
 /* INTRO */
 .omt-intro{padding:72px 64px;background:var(--white)}
-.omt-intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.omt-intro-grid{max-width:780px}
 .omt-intro-body p{font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:16px}
 .omt-intro-body strong{color:var(--ink);font-weight:500}
-.omt-aside{display:flex;flex-direction:column;gap:14px}
-.omt-aside-card{background:var(--mist);border:1px solid var(--border);border-radius:4px;padding:22px 20px}
-.omt-aside-card h4{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-size:17px;font-weight:400;color:var(--deep);margin-bottom:7px}
-.omt-aside-card p{font-size:15px;color:var(--muted);line-height:1.7}
 /* WHAT WE TREAT */
 .treat-section{padding:72px 64px;background:var(--mist);border-top:1px solid var(--border)}
 .treat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:36px}
@@ -106,7 +102,7 @@
 @media(max-width:900px){
   .omt-intro,.treat-section,.airway-section,.process-section,.multi-section,.omt-cta-section{padding:48px 24px}
   .telehealth-band{padding:36px 24px}
-  .omt-intro-grid,.airway-grid,.treat-grid{grid-template-columns:1fr;gap:32px}
+  .airway-grid,.treat-grid{grid-template-columns:1fr;gap:32px}
   #children .treat-grid{grid-template-columns:1fr}
   .process-steps{grid-template-columns:1fr}
 }
@@ -244,12 +240,6 @@
       <div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap">
         <a href="https://triplepointspeechtherapy.janeapp.com/" class="btn-primary" target="_blank" rel="noopener">Book a free consultation</a>
         <a href="faq.html#myofunctional" class="btn-secondary">Read the FAQs</a>
-      </div>
-    </div>
-    <div class="omt-aside">
-      <div class="omt-aside-card">
-        <h4>Evidence-based practice</h4>
-        <p>OMT is recognized within the scope of practice for SLPs by ASHA, and is supported by systematic reviews and meta-analyses. See the <a href="faq.html#research">Research section</a> for peer-reviewed citations.</p>
       </div>
     </div>
   </div>
