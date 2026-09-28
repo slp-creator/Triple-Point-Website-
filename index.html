@@ -45,7 +45,7 @@
 .section-h2 em{font-style:italic;color:var(--slate)}
 .section-intro{font-size:16.5px;color:var(--muted);line-height:1.75;max-width:540px;margin-bottom:24px}
 .chk-wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:4px;overflow:hidden;margin-bottom:20px}
-.chk-col{background:var(--white);padding:22px 22px 20px;display:grid;grid-template-rows:auto 1fr auto}
+.chk-col{background:var(--white);padding:22px 22px 20px}
 .chk-head{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-size:21px;font-weight:400;color:var(--deep);line-height:1.3;margin:0 0 14px;min-height:2.6em}
 .chk-item{display:flex;gap:11px;align-items:flex-start;font-size:15.5px;color:var(--muted);line-height:1.5;padding:9px 0;border-bottom:1px solid rgba(85,124,141,.09);cursor:pointer;-webkit-user-select:none;user-select:none;transition:color .15s}
 .chk-item:hover{color:var(--deep)}
@@ -55,8 +55,6 @@
 .chk-input:checked ~ .chk-box{background:var(--slate);border-color:var(--slate);color:#fff}
 .chk-input:checked ~ span{color:var(--deep)}
 .chk-input:focus-visible ~ .chk-box{outline:2px solid var(--slate);outline-offset:2px}
-.chk-why{padding-top:15px;border-top:1px solid var(--border);font-size:14.5px;color:var(--slate);line-height:1.6;min-height:112px}
-.chk-why b{display:block;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--deep);font-weight:700;margin-bottom:6px}
 .tally{background:var(--deep);border-radius:4px;padding:26px 32px;display:flex;align-items:center;gap:30px;flex-wrap:wrap}
 .tally-num{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-size:46px;color:var(--mist);line-height:1;min-width:46px;text-align:center;font-variant-numeric:lining-nums;font-feature-settings:'lnum' 1}
 .tally-txt{color:rgba(216,235,240,.88);font-size:15.5px;line-height:1.65;flex:1;min-width:260px}
@@ -108,7 +106,6 @@
   .airway-grid{grid-template-columns:1fr;gap:28px}
   .airway-section{padding:40px 20px}
   .chk-wrap{grid-template-columns:1fr}
-  .chk-why{min-height:0}
 }
 @media(max-width:768px){
   .hero{grid-template-columns:1fr;min-height:auto}
@@ -268,7 +265,6 @@
       <label class="chk-item"><input type="checkbox" class="chk-input"><span class="chk-box" aria-hidden="true">&#10003;</span><span>Mouth breathing or dry mouth on waking</span></label>
       <label class="chk-item"><input type="checkbox" class="chk-input"><span class="chk-box" aria-hidden="true">&#10003;</span><span>Chronic nasal congestion</span></label>
     </div>
-    <p class="chk-why"><b>What is often behind it</b>A tongue that rests low instead of up against the palate leaves less room for the airway &mdash; all day, and all night.</p>
   </div>
   <div class="chk-col">
     <h3 class="chk-head">Your jaw aches and your teeth are wearing down.</h3>
@@ -278,7 +274,6 @@
       <label class="chk-item"><input type="checkbox" class="chk-input"><span class="chk-box" aria-hidden="true">&#10003;</span><span>Teeth that shifted back after braces</span></label>
       <label class="chk-item"><input type="checkbox" class="chk-input"><span class="chk-box" aria-hidden="true">&#10003;</span><span>Recurring headaches or neck tension</span></label>
     </div>
-    <p class="chk-why"><b>What is often behind it</b>A swallow pattern that pushes against the teeth hundreds of times a day will out-argue any retainer.</p>
   </div>
   <div class="chk-col">
     <h3 class="chk-head">You have been told this is just how you are.</h3>
@@ -288,7 +283,6 @@
       <label class="chk-item"><input type="checkbox" class="chk-input"><span class="chk-box" aria-hidden="true">&#10003;</span><span>Reflux that never fully resolves</span></label>
       <label class="chk-item"><input type="checkbox" class="chk-input"><span class="chk-box" aria-hidden="true">&#10003;</span><span>Speech that has always taken extra effort</span></label>
     </div>
-    <p class="chk-why"><b>What is often behind it</b>Oral function is rarely assessed in adults &mdash; so a mechanical problem gets filed under personality, or lived with for thirty years.</p>
   </div>
 </div>
 
