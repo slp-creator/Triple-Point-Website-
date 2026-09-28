@@ -70,7 +70,7 @@ function initSelfCheck() {
     '<strong>Check anything that sounds like you.</strong> Most adults who come to Triple Point recognize themselves in more than one column &mdash; which is exactly the point.',
     '<strong>One is worth asking about.</strong> A single symptom can have an ordinary explanation &mdash; or it can simply be the one that is easiest to notice. A free 30-minute consultation will tell you which.',
     '<strong>Two is rarely a coincidence.</strong> Symptoms in different columns usually share one cause, which is why treating them separately so often fails. A free 30-minute consultation is the place to start.',
-    '<strong>Three or more is a pattern, not a coincidence.</strong> A free 30-minute consultation will tell you whether a myofunctional evaluation is the right next step &mdash; and if it is not, Lauren will say so.',
+    '<strong>Worth a closer look.</strong> A free 30-minute consultation will tell you whether a myofunctional evaluation is the right next step &mdash; and if it is not, Lauren will say so.',
   ];
 
   function update() {
