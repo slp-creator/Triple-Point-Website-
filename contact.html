@@ -54,6 +54,16 @@
 .cf-status{font-size:14.5px;line-height:1.6;margin-top:14px;padding:12px 14px;border-radius:4px;display:none}
 .cf-status.show{display:block}
 .cf-status.err{background:#FBEDEA;border:1px solid #E4BBB2;color:#8A3524}
+/* Thank-you dialog shown after a message is sent */
+.cf-thanks{position:fixed;inset:0;z-index:600;display:none;align-items:center;justify-content:center;padding:24px;background:rgba(26,51,64,.55)}
+.cf-thanks.show{display:flex}
+.cf-thanks-box{background:var(--white);border:1px solid var(--border);border-radius:6px;padding:40px 36px;max-width:440px;width:100%;text-align:center;box-shadow:0 18px 48px rgba(44,79,94,.22)}
+.cf-thanks-mark{width:52px;height:52px;border-radius:50%;background:var(--mist);border:1px solid var(--border);color:var(--deep);font-size:24px;line-height:50px;margin:0 auto 18px}
+.cf-thanks-box h3{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-size:27px;font-weight:400;color:var(--deep);line-height:1.25;margin-bottom:12px}
+.cf-thanks-box p{font-size:15px;color:var(--muted);line-height:1.7;margin-bottom:26px}
+.cf-thanks-close{background:var(--deep);color:var(--mist);border:none;border-radius:4px;padding:14px 30px;font-family:Arial,'Arimo',Helvetica,sans-serif;font-size:14px;font-weight:500;letter-spacing:.04em;cursor:pointer;transition:background .2s}
+.cf-thanks-close:hover{background:var(--slate)}
+@media(max-width:560px){.cf-thanks-box{padding:30px 24px}.cf-thanks-box h3{font-size:23px}}
 @media(max-width:900px){.cf-grid{grid-template-columns:1fr;gap:36px}.cf-card{padding:26px 22px}}
 @media(max-width:560px){.cf-two{grid-template-columns:1fr;gap:0}}
 .map-section{padding:0 64px 72px;background:var(--white)}
@@ -268,48 +278,117 @@
     </div>
   </div>
 
+  <!-- Shown once a message has actually reached the form service. -->
+  <div class="cf-thanks" id="cf-thanks" role="dialog" aria-modal="true" aria-labelledby="cf-thanks-h" hidden>
+    <div class="cf-thanks-box">
+      <div class="cf-thanks-mark" aria-hidden="true">&#10003;</div>
+      <h3 id="cf-thanks-h">Thank you &mdash; Lauren will be in touch soon!</h3>
+      <p>Your message has been sent. You can expect to hear back within one business day.</p>
+      <button type="button" class="cf-thanks-close" id="cf-thanks-close">Back to the contact page</button>
+    </div>
+  </div>
+
     <script>
     /*
       The form posts to whichever service is set in FORM_ENDPOINT (Formspree,
-      Web3Forms, a Worker route — anything that accepts a POST). Until one is
-      set, submitting opens the visitor's email client with the message
-      already written, so the form is never a dead end.
+      Web3Forms, a Worker route — anything that accepts a POST and answers
+      with JSON). The post is made in the background, so the visitor never
+      leaves this page: on success the thank-you dialog opens over the
+      contact page, and closing it returns them to it.
+
+      Until an endpoint is set, submitting opens the visitor's email client
+      with the message already written, so the form is never a dead end. No
+      thank-you is shown in that case, because nothing has been sent yet —
+      the message is still sitting in their email program.
     */
     (function () {
       var FORM_ENDPOINT = '';           // e.g. 'https://formspree.io/f/xxxxxxx'
       var EMAIL = 'SLP@triplepointspeechtherapy.com';
       var form = document.getElementById('contact-form');
       var status = document.getElementById('cf-status');
+      var thanks = document.getElementById('cf-thanks');
+      var thanksClose = document.getElementById('cf-thanks-close');
+      var sendBtn = form ? form.querySelector('.cf-send') : null;
+      var lastFocus = null;
       if (!form) return;
 
-      if (FORM_ENDPOINT) {
-        form.action = FORM_ENDPOINT;
-        var next = document.createElement('input');
-        next.type = 'hidden'; next.name = '_next';
-        next.value = location.origin + '/thank-you.html';
-        form.appendChild(next);
-        return;
+      function val(n) { var el = form.elements[n]; return el ? el.value.trim() : ''; }
+
+      function say(msg, isError) {
+        status.className = 'cf-status show' + (isError ? ' err' : '');
+        status.textContent = msg;
+      }
+
+      function mailtoFallback() {
+        var lines = [
+          'Name: ' + val('first_name') + ' ' + val('last_name'),
+          'Email: ' + val('email'),
+          'Phone: ' + (val('phone') || '—'),
+          'Interested in: ' + (val('service') || '—'),
+          '',
+          val('message')
+        ].join('\n');
+        window.location.href = 'mailto:' + EMAIL +
+          '?subject=' + encodeURIComponent('Website enquiry — ' + val('first_name') + ' ' + val('last_name')) +
+          '&body=' + encodeURIComponent(lines);
+      }
+
+      function openThanks() {
+        lastFocus = document.activeElement;
+        thanks.hidden = false;
+        thanks.classList.add('show');
+        thanksClose.focus();
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeThanks() {
+        thanks.classList.remove('show');
+        thanks.hidden = true;
+        document.body.style.overflow = '';
+        if (lastFocus && lastFocus.focus) lastFocus.focus();
+      }
+
+      if (thanksClose) thanksClose.addEventListener('click', closeThanks);
+      if (thanks) {
+        // Clicking the backdrop or pressing Escape also returns to the page.
+        thanks.addEventListener('click', function (e) {
+          if (e.target === thanks) closeThanks();
+        });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && thanks.classList.contains('show')) closeThanks();
+        });
       }
 
       form.addEventListener('submit', function (e) {
         e.preventDefault();
         if (!form.reportValidity()) return;
-        var v = function (n) { var el = form.elements[n]; return el ? el.value.trim() : ''; };
-        var lines = [
-          'Name: ' + v('first_name') + ' ' + v('last_name'),
-          'Email: ' + v('email'),
-          'Phone: ' + (v('phone') || '—'),
-          'Interested in: ' + (v('service') || '—'),
-          '',
-          v('message')
-        ].join('\n');
-        var href = 'mailto:' + EMAIL +
-          '?subject=' + encodeURIComponent('Website enquiry — ' + v('first_name') + ' ' + v('last_name')) +
-          '&body=' + encodeURIComponent(lines);
-        window.location.href = href;
-        status.className = 'cf-status show';
-        status.textContent = 'Your email program should now be open with this message ready to send. '
-          + 'If nothing happened, please write to ' + EMAIL + ' directly.';
+
+        if (!FORM_ENDPOINT) {
+          mailtoFallback();
+          say('Your email program should now be open with this message ready to send. '
+            + 'If nothing happened, please write to ' + EMAIL + ' directly.');
+          return;
+        }
+
+        status.className = 'cf-status';
+        status.textContent = '';
+        if (sendBtn) { sendBtn.disabled = true; sendBtn.textContent = 'Sending…'; }
+
+        fetch(FORM_ENDPOINT, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' }
+        }).then(function (res) {
+          if (!res.ok) throw new Error('Form service returned ' + res.status);
+          form.reset();
+          openThanks();
+        }).catch(function () {
+          say('That message could not be sent just now. Your email program will open '
+            + 'instead — or write to ' + EMAIL + ' directly.', true);
+          mailtoFallback();
+        }).then(function () {
+          if (sendBtn) { sendBtn.disabled = false; sendBtn.textContent = 'Send message'; }
+        });
       });
     })();
     </script>
