@@ -74,13 +74,11 @@ function navHtml(activePage) {
   </a>
   <div class="nav-links">
     ${links}
-    <a href="contact.html" class="nav-book">Get in touch</a>
   </div>
   <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Toggle menu">&#9776;</button>
 </nav>
 <div class="nav-mobile" id="nav-mobile">
   ${links}
-  <a href="contact.html" class="nav-book-mobile">Get in touch</a>
 </div>`;
 }
 
