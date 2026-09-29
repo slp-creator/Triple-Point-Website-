@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&amp;family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap">
 <link rel="stylesheet" href="css/style.css">
 <style>
-.contact-main{padding:72px 64px;background:var(--white)}
+.contact-main{padding:calc(var(--nav-h) + 48px) 64px 72px;background:var(--white)}
 .contact-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:80px;align-items:start}
 .contact-info h3{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-size:22px;font-weight:400;color:var(--deep);margin-bottom:20px}
 .contact-detail{display:flex;gap:14px;margin-bottom:24px;align-items:flex-start}
@@ -26,7 +26,7 @@
 
 /* ── CONTACT: INFO + FORM ── */
 .cf-grid{display:grid;grid-template-columns:1fr 1.25fr;gap:56px;align-items:start;margin-bottom:44px}
-.cf-info h2{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-size:27px;font-weight:300;color:var(--deep);line-height:1.25;margin-bottom:14px}
+.cf-info .cf-h1{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-size:30px;font-weight:300;color:var(--deep);line-height:1.22;margin-bottom:14px}
 .cf-info .lead{font-size:15.5px;color:var(--muted);line-height:1.75;margin-bottom:26px}
 .cf-row{display:flex;gap:14px;align-items:flex-start;margin-bottom:20px}
 .cf-ico{flex:0 0 auto;width:38px;height:38px;border-radius:4px;background:var(--deep);display:flex;align-items:center;justify-content:center}
@@ -76,8 +76,6 @@
 }
 
 @media(max-width:768px){
-  .page-hero{padding:28px 20px 20px}
-  .page-hero h1{font-size:24px;line-height:1.2}
   .intro-grid,.about-grid,.about-layout,.ei-intro,.feeding-grid,.airway-grid,.contact-grid{grid-template-columns:1fr;gap:24px}
   .service-block,.service-block.reverse{grid-template-columns:1fr;gap:20px}
   .service-block.reverse .service-visual{order:0}
@@ -89,8 +87,6 @@
   .faq-nav{display:none}
   .contact-grid{grid-template-columns:1fr}
   .map-section{padding:0 20px 28px}
-  .cta-primary-block{padding:28px 20px}
-  .cta-primary-block h2{font-size:20px}
   .email-block{padding:24px 20px}
   .contact-details-row{grid-template-columns:1fr 1fr}
   .cred-grid{grid-template-columns:repeat(2,1fr)}
@@ -176,50 +172,14 @@
 </div>
 <!-- nav:end -->
 
-<div class="page-hero">
-  <div class="eyebrow">Contact</div>
-  <h1>Start the process by <em>booking a free consultation.</em></h1>
-  <p>The best first step is a free 30-minute consultation. Or email us below and Lauren will get back to you within one business day.</p>
-</div>
-
 <section class="contact-main">
   <div class="contact-single">
 
-    <!-- PRIMARY CTA -->
-    <div class="cta-primary-block" style="text-align:center;background:var(--deep);border-radius:4px;padding:48px 40px;margin-bottom:24px">
-      <h2 style="font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-size:28px;font-weight:400;color:var(--mist);margin-bottom:12px;line-height:1.2">Book a free 30-minute consultation</h2>
-      <p style="font-size:14px;color:rgba(216,235,240,.75);line-height:1.75;margin-bottom:24px;max-width:420px;margin-left:auto;margin-right:auto">The best first step is a free consultation — schedule directly through our secure Jane booking system.</p>
-      <a href="https://triplepointspeechtherapy.janeapp.com/" class="btn-light" style="font-size:13px;padding:14px 28px;letter-spacing:.08em" target="_blank" rel="noopener">Book now at JaneApp ↗</a>
-    </div>
-
     <!-- CONTACT DETAILS -->
-    <!-- GOOGLE REVIEW -->
-    <!--
-      The review link below comes from the Google Business Profile
-      ("Ask for reviews"). The small script under this section reveals it only
-      when a real link is set, so the section can never ship with a dead button.
-    -->
-    <div class="review-section" id="review-section" hidden>
-      <div class="review-box">
-        <div class="review-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
-        <h3>Has therapy made a difference <em>for you or your child?</em></h3>
-        <p>A short review helps other families in the Truckee and Tahoe area find care for breathing, feeding, and speech concerns. It takes about a minute.</p>
-        <a href="https://g.page/r/Cfd1qauALYrGEBM/review" class="btn-primary" target="_blank" rel="noopener">Leave a Google review</a>
-      </div>
-    </div>
-    <script>
-    // Safety interlock: keep the section hidden until a real review link is set.
-    (function () {
-      var s = document.getElementById('review-section');
-      var a = s && s.querySelector('a');
-      if (a && a.getAttribute('href').indexOf('REPLACE_WITH') === -1) s.hidden = false;
-    })();
-    </script>
-
   <div class="cf-grid">
     <div class="cf-info">
       <div class="eyebrow">Contact information</div>
-      <h2>Call or send a message &mdash; Lauren replies <em style="font-style:italic;color:var(--slate)">within one business day.</em></h2>
+      <h1 class="cf-h1">Call or send a message &mdash; Lauren replies <em style="font-style:italic;color:var(--slate)">within one business day.</em></h1>
       <p class="lead">Questions before booking are welcome, from families and from referring providers alike.</p>
       <div class="cf-row">
         <span class="cf-ico" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M4 4h3l1.6 4-2 1.2a11 11 0 0 0 5.2 5.2l1.2-2 4 1.6v3a1.6 1.6 0 0 1-1.7 1.6A14.4 14.4 0 0 1 2.4 5.7 1.6 1.6 0 0 1 4 4z"/></svg></span>
@@ -354,6 +314,29 @@
     })();
     </script>
 
+    <!-- GOOGLE REVIEW -->
+    <!--
+      The review link below comes from the Google Business Profile
+      ("Ask for reviews"). The small script under this section reveals it only
+      when a real link is set, so the section can never ship with a dead button.
+    -->
+    <div class="review-section" id="review-section" hidden>
+      <div class="review-box">
+        <div class="review-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+        <h3>Has therapy made a difference <em>for you or your child?</em></h3>
+        <p>A short review helps other families in the Truckee and Tahoe area find care for breathing, feeding, and speech concerns. It takes about a minute.</p>
+        <a href="https://g.page/r/Cfd1qauALYrGEBM/review" class="btn-primary" target="_blank" rel="noopener">Leave a Google review</a>
+      </div>
+    </div>
+    <script>
+    // Safety interlock: keep the section hidden until a real review link is set.
+    (function () {
+      var s = document.getElementById('review-section');
+      var a = s && s.querySelector('a');
+      if (a && a.getAttribute('href').indexOf('REPLACE_WITH') === -1) s.hidden = false;
+    })();
+    </script>
+
   </div>
 </section>
 
@@ -478,8 +461,6 @@
   }
 
   /* Page hero */
-  div.page-hero { padding: 24px 16px 20px !important; }
-  div.page-hero h1 { font-size: 22px !important; line-height: 1.2 !important; }
 
   /* Sections */
   section, div.omt-intro, div.treat-section, div.airway-section,
@@ -495,8 +476,6 @@
   div.faq-content { width: 100% !important; }
 
   /* Contact */
-  div.cta-primary-block { padding: 24px 16px !important; }
-  div.cta-primary-block h2 { font-size: 18px !important; }
   div.email-block { padding: 20px 16px !important; }
 
   /* Typography */
