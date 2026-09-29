@@ -57,29 +57,3 @@ function initNavScroll() {
 initDropdowns();
 initNavScroll();
 
-// Home page self-check: counts what the visitor recognises and changes the
-// message under the list. The symptoms themselves are plain HTML, so the
-// section still reads correctly if this never runs.
-function initSelfCheck() {
-  const boxes = document.querySelectorAll('.chk-input');
-  const count = document.getElementById('chk-count');
-  const message = document.getElementById('chk-message');
-  if (!boxes.length || !count || !message) return;
-
-  const messages = [
-    '<strong>Check anything that sounds like you.</strong> Most adults who come to Triple Point recognize themselves in more than one column &mdash; which is exactly the point.',
-    '<strong>Worth asking about.</strong> A single symptom can have an ordinary explanation &mdash; or it can simply be the one that is easiest to notice. A free 30-minute consultation will tell you which.',
-    '<strong>These are often connected.</strong> Symptoms in different columns usually share one cause, which is why treating them separately so often fails. A free 30-minute consultation is the place to start.',
-    '<strong>Worth a closer look.</strong> A free 30-minute consultation will tell you whether a myofunctional evaluation is the right next step.',
-  ];
-
-  function update() {
-    const n = [...boxes].filter(b => b.checked).length;
-    count.textContent = n;
-    message.innerHTML = messages[Math.min(n, 3)];
-  }
-  boxes.forEach(b => b.addEventListener('change', update));
-  update();
-}
-
-initSelfCheck();

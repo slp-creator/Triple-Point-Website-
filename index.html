@@ -44,23 +44,17 @@
 .section-h2{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-size:29px;font-weight:300;color:var(--deep);line-height:1.15;margin-bottom:8px;}
 .section-h2 em{font-style:italic;color:var(--slate)}
 .section-intro{font-size:16.5px;color:var(--muted);line-height:1.75;max-width:540px;margin-bottom:24px}
-.chk-wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:4px;overflow:hidden;margin-bottom:20px}
-.chk-col{background:var(--white);padding:22px 22px 20px}
-.chk-head{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-size:21px;font-weight:400;color:var(--deep);line-height:1.3;margin:0 0 14px;min-height:2.6em}
-.chk-item{display:flex;gap:11px;align-items:flex-start;font-size:15.5px;color:var(--muted);line-height:1.5;padding:9px 0;border-bottom:1px solid rgba(85,124,141,.09);cursor:pointer;-webkit-user-select:none;user-select:none;transition:color .15s}
-.chk-item:hover{color:var(--deep)}
-.chk-item:last-child{border-bottom:none}
-.chk-box{flex-shrink:0;width:18px;height:18px;border:1.5px solid var(--steel);border-radius:2px;margin-top:1px;display:flex;align-items:center;justify-content:center;font-size:12px;line-height:1;color:transparent;transition:background .15s,border-color .15s,color .15s}
-.chk-input{position:absolute;width:1px;height:1px;opacity:0;margin:0}
-.chk-input:checked ~ .chk-box{background:var(--slate);border-color:var(--slate);color:#fff}
-.chk-input:checked ~ span{color:var(--deep)}
-.chk-input:focus-visible ~ .chk-box{outline:2px solid var(--slate);outline-offset:2px}
-.tally{background:var(--deep);border-radius:4px;padding:26px 32px;display:flex;align-items:center;gap:30px;flex-wrap:wrap}
-.tally-num{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-size:46px;color:var(--mist);line-height:1;min-width:46px;text-align:center;font-variant-numeric:lining-nums;font-feature-settings:'lnum' 1}
-.tally-txt{color:rgba(216,235,240,.88);font-size:15.5px;line-height:1.65;flex:1;min-width:260px}
-.tally-txt strong{color:var(--mist);font-weight:500}
-.tally-cta{display:inline-block;background:var(--white);color:var(--deep);padding:14px 28px;border-radius:2px;font-size:14px;font-weight:500;letter-spacing:.03em;text-decoration:none;white-space:nowrap;transition:background .2s,transform .2s}
-.tally-cta:hover{background:var(--ice);transform:translateY(-1px)}
+.sym-wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:4px;overflow:hidden;margin-bottom:20px}
+.sym-col{background:var(--white);padding:24px 24px 22px}
+.sym-head{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-size:21px;font-weight:400;color:var(--deep);line-height:1.3;margin:0 0 14px;min-height:2.6em}
+.sym-list{list-style:none;padding:0;margin:0}
+.sym-list li{font-size:15.5px;color:var(--muted);line-height:1.5;padding:7px 0;border-bottom:1px solid rgba(85,124,141,.09);display:flex;gap:9px}
+.sym-list li:last-child{border-bottom:none}
+.sym-list li::before{content:'\2014';color:var(--steel);flex-shrink:0}
+.sym-cta{background:var(--mist);border:1px solid var(--border);border-radius:4px;padding:22px 28px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.sym-cta p{font-size:16px;color:var(--deep);line-height:1.6;margin:0;max-width:560px}
+.sym-cta-btn{display:inline-block;background:var(--deep);color:var(--mist);padding:14px 28px;border-radius:2px;font-size:14px;font-weight:500;letter-spacing:.03em;text-decoration:none;white-space:nowrap;transition:background .2s}
+.sym-cta-btn:hover{background:var(--slate)}
 .chk-kids{margin-top:18px;background:var(--mist);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:4px;padding:16px 22px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:16px;line-height:1.6;color:var(--deep)}
 .chk-kids strong{font-weight:700}
 .chk-kids a{color:var(--slate);font-weight:500;text-decoration:underline;text-underline-offset:3px}
@@ -105,7 +99,7 @@
 @media(max-width:700px){
   .airway-grid{grid-template-columns:1fr;gap:28px}
   .airway-section{padding:40px 20px}
-  .chk-wrap{grid-template-columns:1fr}
+  .sym-wrap{grid-template-columns:1fr}
 }
 @media(max-width:768px){
   .hero{grid-template-columns:1fr;min-height:auto}
@@ -128,10 +122,9 @@
   .symptoms{padding:32px 20px}
   .section-h2{font-size:24px}
   .section-intro{font-size:15.5px}
-  .chk-col{padding:18px 18px 16px}
-  .chk-head{font-size:19px;min-height:0}
-  .tally{padding:22px 20px;gap:18px}
-  .tally-num{font-size:38px}
+  .sym-col{padding:18px 18px 16px}
+  .sym-head{font-size:19px;min-height:0}
+  .sym-cta{padding:20px 18px;gap:14px}
 
   .triple-point-section{padding:40px 20px}
   .triple-point-inner{max-width:100%}
@@ -253,43 +246,42 @@
 
 <!-- SYMPTOMS -->
 <section class="symptoms">
-  <div class="eyebrow">A two-minute self-check</div>
-  <h2 class="section-h2">Check what <em>sounds like you.</em></h2>
+  <div class="eyebrow">Do any of these sound familiar?</div>
+  <h2 class="section-h2">Orofacial myofunctional disorders are more common <em>than most people realize.</em></h2>
   <p class="section-intro">Myofunctional evaluation and therapy are essential to identifying and treating the underlying cause of these symptoms. All of them are common &mdash; common does not mean normal.</p>
-<div class="chk-wrap">
-  <div class="chk-col">
-    <h3 class="chk-head">You sleep eight hours and wake up tired.</h3>
-    <div>
-      <label class="chk-item"><input type="checkbox" class="chk-input"><span class="chk-box" aria-hidden="true">&#10003;</span><span>Snoring, or a partner who notices pauses</span></label>
-      <label class="chk-item"><input type="checkbox" class="chk-input"><span class="chk-box" aria-hidden="true">&#10003;</span><span>Waking unrefreshed after a full night</span></label>
-      <label class="chk-item"><input type="checkbox" class="chk-input"><span class="chk-box" aria-hidden="true">&#10003;</span><span>Mouth breathing or dry mouth on waking</span></label>
-      <label class="chk-item"><input type="checkbox" class="chk-input"><span class="chk-box" aria-hidden="true">&#10003;</span><span>Chronic nasal congestion</span></label>
-    </div>
+<div class="sym-wrap">
+  <div class="sym-col">
+    <h3 class="sym-head">You sleep eight hours and wake up tired.</h3>
+    <ul class="sym-list">
+      <li>Snoring, or a partner who notices pauses</li>
+      <li>Waking unrefreshed after a full night</li>
+      <li>Mouth breathing or dry mouth on waking</li>
+      <li>Chronic nasal congestion</li>
+    </ul>
   </div>
-  <div class="chk-col">
-    <h3 class="chk-head">Your jaw aches and your teeth are wearing down.</h3>
-    <div>
-      <label class="chk-item"><input type="checkbox" class="chk-input"><span class="chk-box" aria-hidden="true">&#10003;</span><span>Clenching or grinding; worn or cracked teeth</span></label>
-      <label class="chk-item"><input type="checkbox" class="chk-input"><span class="chk-box" aria-hidden="true">&#10003;</span><span>Jaw pain, clicking, or locking</span></label>
-      <label class="chk-item"><input type="checkbox" class="chk-input"><span class="chk-box" aria-hidden="true">&#10003;</span><span>Teeth that shifted back after braces</span></label>
-      <label class="chk-item"><input type="checkbox" class="chk-input"><span class="chk-box" aria-hidden="true">&#10003;</span><span>Recurring headaches or neck tension</span></label>
-    </div>
+  <div class="sym-col">
+    <h3 class="sym-head">Your jaw aches and your teeth are wearing down.</h3>
+    <ul class="sym-list">
+      <li>Clenching or grinding; worn or cracked teeth</li>
+      <li>Jaw pain, clicking, or locking</li>
+      <li>Teeth that shifted back after braces</li>
+      <li>Recurring headaches or neck tension</li>
+    </ul>
   </div>
-  <div class="chk-col">
-    <h3 class="chk-head">You have been told this is just how you are.</h3>
-    <div>
-      <label class="chk-item"><input type="checkbox" class="chk-input"><span class="chk-box" aria-hidden="true">&#10003;</span><span>A tongue tie that was never released</span></label>
-      <label class="chk-item"><input type="checkbox" class="chk-input"><span class="chk-box" aria-hidden="true">&#10003;</span><span>Difficulty swallowing pills or certain textures</span></label>
-      <label class="chk-item"><input type="checkbox" class="chk-input"><span class="chk-box" aria-hidden="true">&#10003;</span><span>Reflux that never fully resolves</span></label>
-      <label class="chk-item"><input type="checkbox" class="chk-input"><span class="chk-box" aria-hidden="true">&#10003;</span><span>Speech that has always taken extra effort</span></label>
-    </div>
+  <div class="sym-col">
+    <h3 class="sym-head">You have been told this is just how you are.</h3>
+    <ul class="sym-list">
+      <li>A tongue tie that was never released</li>
+      <li>Difficulty swallowing pills or certain textures</li>
+      <li>Reflux that never fully resolves</li>
+      <li>Speech that has always taken extra effort</li>
+    </ul>
   </div>
 </div>
 
-  <div class="tally">
-    <div class="tally-num" id="chk-count">0</div>
-    <p class="tally-txt" id="chk-message"><strong>Check anything that sounds like you.</strong> Most adults who come to Triple Point recognize themselves in more than one column &mdash; which is exactly the point.</p>
-    <a class="tally-cta" href="https://triplepointspeechtherapy.janeapp.com/" target="_blank" rel="noopener">Book a Free Consultation</a>
+  <div class="sym-cta">
+    <p>Not sure whether any of this applies to you? A free 30-minute consultation is the place to start.</p>
+    <a class="sym-cta-btn" href="https://triplepointspeechtherapy.janeapp.com/" target="_blank" rel="noopener">Book a Free Consultation</a>
   </div>
   <p class="chk-kids"><strong>Looking for your child?</strong> <a href="myofunctional-therapy.html#children">The signs in infants and children look different&nbsp;<span aria-hidden="true">&rarr;</span></a></p>
 </section>
