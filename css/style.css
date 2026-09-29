@@ -56,7 +56,7 @@ footer{background:var(--deep);color:rgba(216,235,240,.82);padding:56px 64px;disp
 .footer-brand img{height:44px;width:auto;opacity:.9}
 .footer-name{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-size:19px;color:var(--white);font-weight:400;margin-top:10px}
 .footer-tagline{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--steel);margin-top:4px}
-.footer-cta{margin-top:20px}
+.footer-cta{margin-top:20px;border-radius:8px}
 .footer-col h4{font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--white);margin-bottom:14px}
 .footer-col a{display:block;font-size:14px;color:rgba(216,235,240,.82);margin-bottom:8px;transition:color .2s}
 .footer-col a:hover{color:var(--white)}
