@@ -342,35 +342,16 @@
       }
 
       /*
-        Two wordings, because two different things can have happened.
-        'sent'  — the message reached the form service; it really is on its way.
-        'email' — the visitor's email program was opened with the message ready,
-                  and nothing is sent until they press Send there. Saying
-                  "Lauren will be in touch" at that point would be untrue and
-                  would lose enquiries silently.
-      */
-      var COPY = {
-        sent: {
-          mark: '\u2713',
-          h: 'Thank you \u2014 Lauren will be in touch soon!',
-          p: 'Your message has been sent. You can expect to hear back within one business day.',
-          btn: 'Back to the contact page'
-        },
-        email: {
-          mark: '\u2709',
-          h: 'Almost there \u2014 press Send in your email',
-          p: 'Your email program has opened in a new tab with this message ready to go. '
-             + 'It will not reach Lauren until you press Send there.',
-          btn: 'Back to the contact page'
-        }
-      };
+        Shown after a message is submitted, on both paths: a post that reached
+        the form service, and the email fallback used while no endpoint is
+        set. The status line underneath carries the direct address in case the
+        mail program did not open.
 
-      function openThanks(mode) {
-        var c = COPY[mode] || COPY.sent;
-        thanks.querySelector('.cf-thanks-mark').innerHTML = c.mark;
-        thanks.querySelector('#cf-thanks-h').textContent = c.h;
-        thanks.querySelector('.cf-thanks-p').textContent = c.p;
-        thanksClose.textContent = c.btn;
+        The one case that does not show it is a post that failed outright —
+        there the site knows the message did not get through, and an error
+        line says so instead.
+      */
+      function openThanks() {
         lastFocus = document.activeElement;
         thanks.hidden = false;
         thanks.classList.add('show');
@@ -403,7 +384,7 @@
         if (!FORM_ENDPOINT) {
           say('If your email program did not open, please write to ' + EMAIL + ' directly.');
           mailtoFallback();
-          openThanks('email');
+          openThanks();
           return;
         }
 
@@ -418,12 +399,11 @@
         }).then(function (res) {
           if (!res.ok) throw new Error('Form service returned ' + res.status);
           form.reset();
-          openThanks('sent');
+          openThanks();
         }).catch(function () {
           say('That message could not be sent just now, so your email program was '
             + 'opened instead — or write to ' + EMAIL + ' directly.', true);
           mailtoFallback();
-          openThanks('email');
         }).then(function () {
           if (sendBtn) { sendBtn.disabled = false; sendBtn.textContent = 'Send message'; }
         });
