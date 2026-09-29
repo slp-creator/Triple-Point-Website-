@@ -43,20 +43,8 @@
 .ba-service-card h4{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-size:16px;font-weight:500;color:var(--deep);margin-bottom:6px}
 .ba-service-card p{font-size:14px;color:var(--muted);line-height:1.6}
 .ba-service-card span{font-size:12px;color:var(--slate);font-weight:500;letter-spacing:.04em;margin-top:10px;display:block}
-/* TELEHEALTH BAND */
-.telehealth-band{background:var(--deep);padding:48px 64px;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap}
-.telehealth-band h3{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-size:26px;font-weight:400;color:var(--mist);margin-bottom:8px}
-.telehealth-band p{font-size:14px;color:rgba(216,235,240,.7);max-width:min(480px,100%);line-height:1.7}
-/* CTA */
-.ba-cta-section{padding:72px 64px;background:var(--white);border-top:1px solid var(--border)}
-.ba-cta-inner{background:var(--mist);border:1px solid var(--border);border-radius:4px;padding:48px;text-align:center}
-.ba-cta-inner h2{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-size:32px;font-weight:400;color:var(--deep);margin-bottom:12px}
-.ba-cta-inner h2 em{font-style:italic;color:var(--slate)}
-.ba-cta-inner p{font-size:15px;color:var(--muted);max-width:min(500px,100%);margin:0 auto 28px;line-height:1.75}
-.ba-cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 @media(max-width:900px){
-  .ba-main,.how-section,.ba-services-section,.ba-cta-section{padding:48px 24px}
-  .telehealth-band{padding:36px 24px}
+  .ba-main,.how-section,.ba-services-section{padding:48px 24px}
   .ba-intro,.how-grid{grid-template-columns:1fr;gap:32px}
 }
 
@@ -64,7 +52,7 @@
   .page-hero{padding:28px 20px 20px}
   .page-hero h1{font-size:24px;line-height:1.2}
   .ba-intro,.how-grid,.ba-services-grid{grid-template-columns:1fr;gap:24px}
-  .ba-main,.how-section,.ba-services-section,.ba-cta-section{padding:24px 20px}
+  .ba-main,.how-section,.ba-services-section{padding:24px 20px}
   .section-h2{font-size:20px}
   .eyebrow{font-size:10.5px}
 }
@@ -153,14 +141,6 @@
   <div class="eyebrow">Telehealth — Bay Area &amp; Foothills</div>
   <h1>Myofunctional &amp; speech therapy for families across the region — <em>from wherever you are.</em></h1>
   <p>Lauren O'Connor, MS CCC-SLP provides telehealth myofunctional therapy, early intervention coaching, and speech therapy to families and adults across the Bay Area and the Sierra foothills — licensed and available statewide in California.</p>
-</div>
-
-<!-- TRUST BAR -->
-<div class="trust-bar">
-  <div class="trust-item"><div class="trust-val">MS, CCC-SLP</div><div class="trust-lbl">ASHA-certified speech-language pathologist</div></div>
-  <div class="trust-item"><div class="trust-val">IAOM &amp; Breathe Institute</div><div class="trust-lbl">Orofacial myofunctional therapy training</div></div>
-  <div class="trust-item"><div class="trust-val">14 years</div><div class="trust-lbl">Clinical experience across all ages</div></div>
-  <div class="trust-item"><div class="trust-val">Licensed statewide</div><div class="trust-lbl">Telehealth available throughout California</div></div>
 </div>
 
 <!-- INTRO -->
@@ -252,27 +232,6 @@
   </div>
 </section>
 
-<!-- TELEHEALTH BAND -->
-<div class="telehealth-band">
-  <div>
-    <h3>Available throughout California via telehealth</h3>
-    <p>Sessions run through Jane's secure, HIPAA-compliant video platform. A link is sent before each appointment — no app download required.</p>
-  </div>
-  <a href="https://triplepointspeechtherapy.janeapp.com/" class="btn-light" target="_blank" rel="noopener">Book a consultation</a>
-</div>
-
-<!-- CTA -->
-<section class="ba-cta-section">
-  <div class="ba-cta-inner">
-    <h2>Ready to get started?</h2>
-    <p>A free 30-minute consultation is the easiest way to find out whether telehealth is the right fit for your situation. Lauren will walk you through which of her services work fully remote and which involve an in-person evaluation and treatment sessions.</p>
-    <div class="ba-cta-btns">
-      <a href="https://triplepointspeechtherapy.janeapp.com/" class="btn-primary" target="_blank" rel="noopener">Book a free consultation</a>
-      <a href="faq.html" class="btn-secondary">Read the FAQ</a>
-    </div>
-  </div>
-</section>
-
 <!-- footer:start -->
 <footer>
   <div class="footer-brand">
@@ -350,7 +309,7 @@
   div.page-hero h1 { font-size: 22px !important; line-height: 1.2 !important; }
 
   /* Sections */
-  section, div.ba-main, div.how-section, div.ba-services-section, div.ba-cta-section {
+  section, div.ba-main, div.how-section, div.ba-services-section {
     padding: 24px 16px !important;
   }
 
