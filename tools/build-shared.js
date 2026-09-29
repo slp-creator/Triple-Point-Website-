@@ -33,7 +33,6 @@ const PAGES = {
   'faq.html': 'faq',
   'resources.html': 'resources',
   'contact.html': 'contact',
-  'thank-you.html': 'contact',
 };
 
 const NAV_ITEMS = [
