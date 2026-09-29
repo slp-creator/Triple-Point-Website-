@@ -24,6 +24,38 @@
 .booking-box h4{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-size:22px;font-weight:400;color:var(--mist);margin-bottom:8px}
 .booking-box p{font-size:15px;color:rgba(216,235,240,.7);line-height:1.65;margin-bottom:20px}
 
+/* ── CONTACT: INFO + FORM ── */
+.cf-grid{display:grid;grid-template-columns:1fr 1.25fr;gap:56px;align-items:start;margin-bottom:44px}
+.cf-info h2{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-size:27px;font-weight:300;color:var(--deep);line-height:1.25;margin-bottom:14px}
+.cf-info .lead{font-size:15.5px;color:var(--muted);line-height:1.75;margin-bottom:26px}
+.cf-row{display:flex;gap:14px;align-items:flex-start;margin-bottom:20px}
+.cf-ico{flex:0 0 auto;width:38px;height:38px;border-radius:4px;background:var(--deep);display:flex;align-items:center;justify-content:center}
+.cf-ico svg{width:18px;height:18px;fill:none;stroke:var(--mist);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.cf-label{font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--slate);margin-bottom:3px}
+.cf-val{font-size:15.5px;color:var(--ink);line-height:1.6}
+.cf-val a{color:var(--ink)}
+.cf-val a:hover{color:var(--slate)}
+.cf-val .sub{display:block;font-size:14px;color:var(--muted);line-height:1.6;margin-top:3px}
+.cf-card{background:var(--mist);border:1px solid var(--border);border-radius:6px;padding:34px 36px}
+.cf-card h2{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-size:27px;font-weight:400;color:var(--deep);margin-bottom:8px}
+.cf-card .note{font-size:15px;color:var(--muted);line-height:1.7;margin-bottom:22px}
+.cf-two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.cf-field{margin-bottom:16px}
+.cf-field label{display:block;font-size:14px;font-weight:500;color:var(--ink);margin-bottom:6px}
+.cf-field label .req{color:var(--gold)}
+.cf-field input,.cf-field select,.cf-field textarea{width:100%;font-family:Arial,'Arimo',Helvetica,sans-serif;font-size:15px;color:var(--ink);background:var(--white);border:1px solid var(--border);border-radius:4px;padding:12px 14px;line-height:1.5}
+.cf-field textarea{min-height:132px;resize:vertical}
+.cf-field input:focus,.cf-field select:focus,.cf-field textarea:focus{outline:2px solid var(--slate);outline-offset:1px;border-color:var(--slate)}
+.cf-field input::placeholder,.cf-field textarea::placeholder{color:#8aa0a9}
+.cf-send{width:100%;background:var(--deep);color:var(--mist);border:none;border-radius:4px;padding:16px 24px;font-family:Arial,'Arimo',Helvetica,sans-serif;font-size:15px;font-weight:500;letter-spacing:.04em;cursor:pointer;transition:background .2s}
+.cf-send:hover{background:var(--slate)}
+.cf-fine{font-size:13px;color:var(--muted);line-height:1.6;text-align:center;margin-top:12px}
+.cf-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.cf-status{font-size:14.5px;line-height:1.6;margin-top:14px;padding:12px 14px;border-radius:4px;display:none}
+.cf-status.show{display:block}
+.cf-status.err{background:#FBEDEA;border:1px solid #E4BBB2;color:#8A3524}
+@media(max-width:900px){.cf-grid{grid-template-columns:1fr;gap:36px}.cf-card{padding:26px 22px}}
+@media(max-width:560px){.cf-two{grid-template-columns:1fr;gap:0}}
 .map-section{padding:0 64px 72px;background:var(--white)}
 .review-section{padding:0;margin-bottom:40px}
 .review-box{background:var(--mist);border:1px solid var(--border);border-radius:4px;padding:40px 32px;text-align:center}
@@ -161,15 +193,6 @@
     </div>
 
     <!-- CONTACT DETAILS -->
-    <!-- EMAIL SECTION -->
-    <div style="background:var(--mist);border:1px solid var(--border);border-radius:4px;padding:32px 36px;margin-bottom:40px;text-align:center">
-      <div class="eyebrow" style="justify-content:center;margin-bottom:12px">Have a question first?</div>
-      <h3 style="font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-size:22px;font-weight:400;color:var(--deep);margin-bottom:10px;line-height:1.3">Patients and providers are welcome <em style="font-style:italic;color:var(--slate)">to reach out directly.</em></h3>
-      <p style="font-size:15px;color:var(--muted);line-height:1.75;max-width:480px;margin:0 auto 20px">Whether you are a prospective patient with questions before booking, or a provider interested in collaborating or making a referral — Lauren is happy to hear from you.</p>
-      <a href="mailto:SLP@triplepointspeechtherapy.com" style="display:inline-block;background:var(--deep);color:var(--mist);padding:11px 24px;border-radius:2px;font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;text-decoration:none">Email Lauren ↗</a>
-      <p style="font-size:13px;color:var(--muted);margin-top:12px">SLP@triplepointspeechtherapy.com &nbsp;·&nbsp; Response within one business day</p>
-    </div>
-
     <!-- GOOGLE REVIEW -->
     <!--
       The review link below comes from the Google Business Profile
@@ -193,51 +216,143 @@
     })();
     </script>
 
-    <div class="contact-details-row">
-      <div class="contact-detail">
-        <div class="cd-text">
-          <div class="cd-label">Truckee Office</div>
-          <div class="cd-value">10775 Pioneer Trail, Suite 216a<br>Truckee, CA 96161</div>
+  <div class="cf-grid">
+    <div class="cf-info">
+      <div class="eyebrow">Contact information</div>
+      <h2>Call or send a message &mdash; Lauren replies <em style="font-style:italic;color:var(--slate)">within one business day.</em></h2>
+      <p class="lead">Questions before booking are welcome, from families and from referring providers alike.</p>
+      <div class="cf-row">
+        <span class="cf-ico" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M4 4h3l1.6 4-2 1.2a11 11 0 0 0 5.2 5.2l1.2-2 4 1.6v3a1.6 1.6 0 0 1-1.7 1.6A14.4 14.4 0 0 1 2.4 5.7 1.6 1.6 0 0 1 4 4z"/></svg></span>
+        <div>
+          <div class="cf-label">Phone</div>
+          <div class="cf-val"><a href="tel:+15303625983">(530) 362-5983</a></div>
         </div>
       </div>
-      <div class="contact-detail">
-        <div class="cd-text">
-          <div class="cd-label">Mammoth Lakes</div>
-          <div class="cd-value">96 Oak Tree Way, Suite 4<br>Mammoth Lakes, CA 93546<br>
-          <span style="font-size:14px;color:var(--muted);font-style:italic">Limited availability — please <a href="mailto:SLP@triplepointspeechtherapy.com" style="color:var(--slate)">email directly</a> to request this location.</span></div>
+      <div class="cf-row">
+        <span class="cf-ico" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M2.6 5.2h14.8v11.6H2.6z"/><path d="m2.6 6 7.4 5.4L17.4 6"/></svg></span>
+        <div>
+          <div class="cf-label">Email</div>
+          <div class="cf-val"><a href="mailto:SLP@triplepointspeechtherapy.com">SLP@triplepointspeechtherapy.com</a></div>
         </div>
       </div>
-      <div class="contact-detail">
-        <div class="cd-text">
-          <div class="cd-label">Email</div>
-          <div class="cd-value"><a href="mailto:SLP@triplepointspeechtherapy.com">SLP@triplepointspeechtherapy.com</a></div>
+      <div class="cf-row">
+        <span class="cf-ico" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M10 18s6-5.1 6-9.4A6 6 0 0 0 4 8.6C4 12.9 10 18 10 18z"/><circle cx="10" cy="8.6" r="2.2"/></svg></span>
+        <div>
+          <div class="cf-label">Truckee office</div>
+          <div class="cf-val">10775 Pioneer Trail, Suite 216a<br>Truckee, CA 96161<span class="sub"><a href="https://www.google.com/maps?cid=14306297196954875383" target="_blank" rel="noopener" style="color:var(--slate);text-decoration:underline">Get directions &rarr;</a></span></div>
         </div>
       </div>
-      <div class="contact-detail">
-        <div class="cd-text">
-          <div class="cd-label">Phone</div>
-          <div class="cd-value"><a href="tel:+15303625983">(530) 362-5983</a></div>
+      <div class="cf-row">
+        <span class="cf-ico" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M10 18s6-5.1 6-9.4A6 6 0 0 0 4 8.6C4 12.9 10 18 10 18z"/><circle cx="10" cy="8.6" r="2.2"/></svg></span>
+        <div>
+          <div class="cf-label">Mammoth Lakes</div>
+          <div class="cf-val">96 Oak Tree Way, Suite 4<br>Mammoth Lakes, CA 93546<span class="sub">Limited availability &mdash; please email to request this location.</span></div>
         </div>
       </div>
-      <div class="contact-detail">
-        <div class="cd-text">
-          <div class="cd-label">Hours</div>
-          <div class="cd-value">Monday &ndash; Friday<br>9:00 a.m. &ndash; 6:00 p.m.</div>
+      <div class="cf-row">
+        <span class="cf-ico" aria-hidden="true"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="7.4"/><path d="M10 5.6V10l3 1.8"/></svg></span>
+        <div>
+          <div class="cf-label">Hours</div>
+          <div class="cf-val">Monday &ndash; Friday<br>9:00 a.m. &ndash; 6:00 p.m.</div>
         </div>
       </div>
-      <div class="contact-detail">
-        <div class="cd-text">
-          <div class="cd-label">Fax</div>
-          <div class="cd-value">(530) 316-8762</div>
+      <div class="cf-row">
+        <span class="cf-ico" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M2.8 6.4h9.4v7.2H2.8z"/><path d="m12.2 10.6 5 2.6V6.8l-5 2.6z"/></svg></span>
+        <div>
+          <div class="cf-label">Telehealth</div>
+          <div class="cf-val">Available throughout California via secure video</div>
         </div>
       </div>
-      <div class="contact-detail">
-        <div class="cd-text">
-          <div class="cd-label">Telehealth</div>
-          <div class="cd-value">Available throughout California via secure video</div>
+      <div class="cf-row">
+        <span class="cf-ico" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M5.4 8V3.4h9.2V8"/><path d="M3 8h14v6H3z"/><path d="M5.4 14h9.2v3.6H5.4z"/></svg></span>
+        <div>
+          <div class="cf-label">Fax</div>
+          <div class="cf-val">(530) 316-8762</div>
         </div>
       </div>
     </div>
+
+    <div class="cf-card">
+      <h2>Send a message</h2>
+      <p class="note">Tell Lauren a little about what is going on and she will be in touch within one business day.</p>
+      <form id="contact-form" method="POST" novalidate>
+        <div class="cf-two">
+          <div class="cf-field"><label for="cf-first">First name <span class="req">*</span></label><input id="cf-first" name="first_name" type="text" autocomplete="given-name" required></div>
+          <div class="cf-field"><label for="cf-last">Last name <span class="req">*</span></label><input id="cf-last" name="last_name" type="text" autocomplete="family-name" required></div>
+        </div>
+        <div class="cf-two">
+          <div class="cf-field"><label for="cf-email">Email <span class="req">*</span></label><input id="cf-email" name="email" type="email" autocomplete="email" required></div>
+          <div class="cf-field"><label for="cf-phone">Phone</label><input id="cf-phone" name="phone" type="tel" autocomplete="tel"></div>
+        </div>
+        <div class="cf-field">
+          <label for="cf-service">What are you interested in?</label>
+          <select id="cf-service" name="service">
+            <option value="">Select a service&hellip;</option>
+            <option>Myofunctional therapy</option>
+            <option>Tongue tie support</option>
+            <option>Early intervention coaching</option>
+            <option>Speech therapy</option>
+            <option>Telehealth</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div class="cf-field">
+          <label for="cf-message">Tell us a bit about what is going on <span class="req">*</span></label>
+          <textarea id="cf-message" name="message" required placeholder="A short description of your concerns and what you are hoping for. Questions are welcome."></textarea>
+        </div>
+        <div class="cf-hp" aria-hidden="true"><label>Leave this field empty<input name="_gotcha" type="text" tabindex="-1" autocomplete="off"></label></div>
+        <button type="submit" class="cf-send">Send message</button>
+        <p class="cf-fine">Please keep sensitive medical details out of this form &mdash; we will take a full history at your consultation.</p>
+        <div class="cf-status" id="cf-status" role="status"></div>
+      </form>
+    </div>
+  </div>
+
+    <script>
+    /*
+      The form posts to whichever service is set in FORM_ENDPOINT (Formspree,
+      Web3Forms, a Worker route — anything that accepts a POST). Until one is
+      set, submitting opens the visitor's email client with the message
+      already written, so the form is never a dead end.
+    */
+    (function () {
+      var FORM_ENDPOINT = '';           // e.g. 'https://formspree.io/f/xxxxxxx'
+      var EMAIL = 'SLP@triplepointspeechtherapy.com';
+      var form = document.getElementById('contact-form');
+      var status = document.getElementById('cf-status');
+      if (!form) return;
+
+      if (FORM_ENDPOINT) {
+        form.action = FORM_ENDPOINT;
+        var next = document.createElement('input');
+        next.type = 'hidden'; next.name = '_next';
+        next.value = location.origin + '/thank-you.html';
+        form.appendChild(next);
+        return;
+      }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!form.reportValidity()) return;
+        var v = function (n) { var el = form.elements[n]; return el ? el.value.trim() : ''; };
+        var lines = [
+          'Name: ' + v('first_name') + ' ' + v('last_name'),
+          'Email: ' + v('email'),
+          'Phone: ' + (v('phone') || '—'),
+          'Interested in: ' + (v('service') || '—'),
+          '',
+          v('message')
+        ].join('\n');
+        var href = 'mailto:' + EMAIL +
+          '?subject=' + encodeURIComponent('Website enquiry — ' + v('first_name') + ' ' + v('last_name')) +
+          '&body=' + encodeURIComponent(lines);
+        window.location.href = href;
+        status.className = 'cf-status show';
+        status.textContent = 'Your email program should now be open with this message ready to send. '
+          + 'If nothing happened, please write to ' + EMAIL + ' directly.';
+      });
+    })();
+    </script>
 
   </div>
 </section>
