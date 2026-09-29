@@ -87,7 +87,7 @@ function footerHtml() {
   <div class="footer-brand">
     <div class="footer-name">Triple Point Speech Therapy</div>
     <div class="footer-tagline">Breathe &middot; Eat &middot; Speak</div>
-    <a href="${BOOKING_URL}" class="btn-light footer-cta" target="_blank" rel="noopener">Book a Free Consultation</a>
+    <a href="contact.html" class="btn-light footer-cta">Contact for a Free Consultation</a>
   </div>
   <div class="footer-col">
     <h4>Navigation</h4>
