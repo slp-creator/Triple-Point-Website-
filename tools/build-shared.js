@@ -74,13 +74,13 @@ function navHtml(activePage) {
   </a>
   <div class="nav-links">
     ${links}
-    <a href="${BOOKING_URL}" class="nav-book" target="_blank" rel="noopener">Book Now</a>
+    <a href="contact.html" class="nav-book">Get in touch</a>
   </div>
   <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Toggle menu">&#9776;</button>
 </nav>
 <div class="nav-mobile" id="nav-mobile">
   ${links}
-  <a href="${BOOKING_URL}" class="nav-book-mobile" target="_blank" rel="noopener">Book a Free Consultation</a>
+  <a href="contact.html" class="nav-book-mobile">Get in touch</a>
 </div>`;
 }
 
