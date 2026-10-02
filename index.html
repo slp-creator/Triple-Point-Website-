@@ -19,8 +19,8 @@
 .hero{display:grid;grid-template-columns:1fr 1fr;min-height:420px;position:relative;overflow:hidden}
 .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 68% 38%,rgba(139,186,202,.14) 0%,transparent 56%);pointer-events:none}
 .hero-left{display:flex;flex-direction:column;justify-content:center;padding:56px 48px 56px 64px;position:relative;z-index:1}
-.hero-left .hero-eyebrow{display:block;line-height:1.7;max-width:460px}
-.hero-left .hero-eyebrow::before{display:inline-block;vertical-align:middle;margin-right:9px;position:relative;top:-1px}
+.hero-left .hero-eyebrow{display:block;font-size:15px;font-weight:600;letter-spacing:.1em;color:var(--deep);line-height:1.75;max-width:520px;margin-bottom:18px}
+.hero-left .hero-eyebrow::before{display:inline-block;vertical-align:middle;width:22px;background:var(--deep);margin-right:11px;position:relative;top:-2px}
 .hero-h1{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-size:clamp(28px,3.2vw,44px);font-weight:300;line-height:1.1;color:var(--deep);margin-bottom:14px;}
 .hero-h1 em{font-style:italic;color:var(--slate)}
 .hero-sub{font-size:19px;line-height:1.7;color:var(--muted);max-width:430px;margin-bottom:24px}
@@ -125,6 +125,7 @@
   .sc-label{height:44px}
 
   .eyebrow{font-size:10.5px}
+  .hero-left .hero-eyebrow{font-size:13px;letter-spacing:.08em}
 }
 </style>
   <meta property="og:title" content="Myofunctional &amp; Speech Therapy | Truckee &amp; Lake Tahoe, CA">
@@ -234,7 +235,7 @@
   <div class="sym-col">
     <h3 class="sym-head">You sleep eight hours and wake up tired.</h3>
     <ul class="sym-list">
-      <li>Snoring, or a partner who notices pauses</li>
+      <li>Snoring or sleep apnea</li>
       <li>Waking unrefreshed after a full night</li>
       <li>Mouth breathing or dry mouth on waking</li>
       <li>Chronic nasal congestion</li>
