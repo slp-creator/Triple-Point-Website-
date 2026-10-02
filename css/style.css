@@ -103,3 +103,40 @@ footer{background:var(--deep);color:rgba(216,235,240,.82);padding:56px 64px;disp
   .treat-grid{grid-template-columns:1fr}
   .al{grid-template-columns:1fr}
 }
+
+/* ── MONOCHROME TYPE ──────────────────────────────────────────────────────
+   Text only: pure black on light surfaces, pure white on dark ones. No greys.
+   Backgrounds, borders, the dark bands, the photos and the gold accent are
+   untouched.
+
+   !important is required because every page carries its own <style> block
+   after this file. Nothing else on the site sets `color` with !important, so
+   these rules have nothing to fight. */
+
+body, body * { color: #000000 !important; }
+
+/* Dark surfaces, and type that sits over a photo, stay white. */
+.triple-point-section, .triple-point-section *,
+.impacts, .impacts *,
+footer, footer *,
+.footer-bottom, .footer-bottom *,
+.booking-box, .booking-box *,
+.hero-img-caption, .hero-img-caption *,
+.omt-intro-photo-cap, .omt-intro-photo-cap *,
+.btn-primary, .cf-send, .cf-thanks-close,
+.treat-icon, .step-num, .cf-ico, .coaching-card .cc-icon { color: #FFFFFF !important; }
+
+/* Light buttons sitting on the dark footer keep black type. */
+.btn-light, .footer-cta { color: #000000 !important; }
+
+/* Rules and marks follow their type. */
+.eyebrow::before { background: #000000 !important; }
+.triple-point-section .tp-rule { background: #FFFFFF !important; }
+
+/* The copyright bar was a black wash over the footer; it now matches the
+   footer, with a hairline instead of a grey band. */
+.footer-bottom { background: var(--deep) !important;
+                 border-top: 1px solid rgba(255,255,255,.25); }
+
+/* The gold review stars are a decorative accent, not type. */
+.review-stars { color: var(--gold) !important; }
