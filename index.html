@@ -74,14 +74,14 @@
 /* ── SERVICES TEASER ── */
 .services-teaser{padding:64px 64px;background:var(--white)}
 .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-bottom:24px}
-.service-card{background:var(--mist);border:1px solid var(--border);border-radius:4px;overflow:hidden;cursor:pointer;transition:border-color .2s,transform .2s}
+.service-card{background:var(--mist);border:1px solid var(--border);border-radius:4px;overflow:hidden;cursor:pointer;transition:border-color .2s,transform .2s;display:flex;flex-direction:column}
 .service-card:hover{border-color:var(--slate);transform:translateY(-3px)}
 .sc-label{width:100%;height:70px;display:flex;align-items:center;justify-content:center;background:var(--mist);border-bottom:1px solid var(--border)}
-.sc-label span{font-family:'Inter',-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;font-size:15px;color:var(--slate);letter-spacing:.07em;text-transform:uppercase}
-.sc-body{padding:16px}
-.sc-body h3{font-family:'Inter',-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;font-size:19px;font-weight:500;color:var(--deep);margin-bottom:6px}
+.sc-label h3{font-family:'Inter',-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;font-size:14px;font-weight:600;color:var(--deep);letter-spacing:.07em;text-transform:uppercase;text-align:center;margin:0;padding:0 14px;line-height:1.35}
+.sc-who{font-size:12.5px;font-weight:600;color:var(--slate);letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px}
+.sc-body{padding:16px;display:flex;flex-direction:column;flex:1}
 .sc-body p{font-size:15px;color:var(--muted);line-height:1.6}
-.sc-link{font-size:12px;color:var(--slate);font-weight:500;letter-spacing:.04em;margin-top:8px;display:block}
+.sc-link{font-size:12px;color:var(--slate);font-weight:500;letter-spacing:.04em;margin-top:auto;padding-top:10px;display:block}
 
 /* ── EYEBROW ── */
 .eyebrow{font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--slate);display:flex;align-items:center;gap:8px;margin-bottom:14px}
@@ -281,27 +281,27 @@
   <p class="section-intro">Triple Point Speech Therapy offers focused services built around the intersection of breathing, eating, and speaking.</p>
   <div class="services-grid">
     <div class="service-card" onclick="location.href='myofunctional-therapy.html'">
-      <div class="sc-label"><span>Myofunctional Therapy</span></div>
+      <div class="sc-label"><h3>Orofacial Myofunctional Therapy</h3></div>
       <div class="sc-body">
-        <h3>Orofacial Myofunctional Therapy</h3>
+        <div class="sc-who">All ages &mdash; infants, children &amp; adults</div>
         <p>Evidence-based exercises that restore functional breathing, chewing, swallowing, and speech patterns.</p>
-        <span class="sc-link">Learn more →</span>
+        <span class="sc-link">Learn more &rarr;</span>
       </div>
     </div>
     <div class="service-card" onclick="location.href='early-intervention.html'">
-      <div class="sc-label"><span>Early Intervention</span></div>
+      <div class="sc-label"><h3>Early Intervention Coaching</h3></div>
       <div class="sc-body">
-        <h3>Early Intervention Coaching</h3>
+        <div class="sc-who">Birth to 4 years</div>
         <p>In-home and telehealth parent coaching for children under 4 with communication delays throughout California.</p>
-        <span class="sc-link">Learn more →</span>
+        <span class="sc-link">Learn more &rarr;</span>
       </div>
     </div>
     <div class="service-card" onclick="location.href='speech-therapy.html'">
-      <div class="sc-label"><span>Speech Therapy</span></div>
+      <div class="sc-label"><h3>Speech Therapy</h3></div>
       <div class="sc-body">
-        <h3>Speech Therapy</h3>
-        <p>Personalized therapy for articulation, fluency, and communication clarity — for children and adults.</p>
-        <span class="sc-link">Learn more →</span>
+        <div class="sc-who">Children &amp; adults</div>
+        <p>Personalized therapy for articulation, fluency, and communication clarity.</p>
+        <span class="sc-link">Learn more &rarr;</span>
       </div>
     </div>
   </div>
