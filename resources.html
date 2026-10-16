@@ -38,6 +38,14 @@
 .res-jump a{font-size:14px;font-weight:500;letter-spacing:.04em;color:var(--slate);background:var(--white);border:1px solid var(--border);border-radius:3px;padding:7px 14px;text-decoration:none;transition:all .2s}
 .res-jump a:hover{border-color:var(--slate);color:var(--deep)}
 
+/* Hero: centered, and without the tinted band so it sits on the page colour.
+   These come after css/style.css, so they win on order alone — no !important. */
+.page-hero{background:var(--white);text-align:center}
+.page-hero .eyebrow{justify-content:center}
+.page-hero h1{margin-left:auto;margin-right:auto}
+.page-hero p{margin-left:auto;margin-right:auto}
+.res-jump{justify-content:center}
+
 /* Closing CTA */
 
 @media(max-width:900px){
