@@ -40,11 +40,12 @@
 /*  CREDENTIAL BADGES  */
 .cred-badges-section{padding:56px 64px;background:var(--white);border-top:1px solid var(--border)}
 .cred-badges-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-top:36px}
-.cred-badge-card{background:var(--mist);border:1px solid var(--border);border-radius:4px;padding:20px 16px;text-align:center;transition:all .2s;text-decoration:none;display:block}
-.cred-badge-card:hover{border-color:var(--slate);transform:translateY(-2px);box-shadow:0 4px 16px rgba(44,79,94,.1)}
-.cred-badge-abbr{font-family:'Inter',-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;font-size:22px;font-weight:500;color:var(--deep);margin-bottom:6px}
-.cred-badge-name{font-size:12px;color:var(--muted);line-height:1.4;letter-spacing:.01em}
-.cred-badge-type{font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--slate);margin-top:8px;padding-top:8px;border-top:1px solid var(--border)}
+.cred-badge-card{background:var(--deep);border:1px solid rgba(255,255,255,.18);border-radius:4px;padding:20px 16px;text-align:center;transition:all .2s;text-decoration:none;display:block}
+/* white type needs !important: css/style.css paints every text node black with it */
+.cred-badge-card, .cred-badge-card *{color:#FFFFFF !important}
+.cred-badge-card:hover{border-color:#FFFFFF;transform:translateY(-2px);box-shadow:0 4px 16px rgba(44,79,94,.25)}
+.cred-badge-name{font-size:15px;font-weight:600;line-height:1.35;letter-spacing:.01em}
+.cred-badge-type{font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;margin-top:8px;padding-top:8px;border-top:1px solid rgba(255,255,255,.25)}
 @media(max-width:900px){.cred-badges-section{padding:48px 24px}}
 
 
@@ -220,6 +221,42 @@
   </div>
 </section>
 
+<section class="cred-badges-section">
+  <div class="eyebrow">Credentials &amp; affiliations</div>
+  <h2 class="section-h2">Trained and affiliated with <em>leading organizations.</em></h2>
+  <p class="section-intro">Lauren holds training, membership, and ambassador status with the following professional organizations in orofacial myology, sleep medicine, and speech-language pathology.</p>
+  <div class="cred-badges-grid">
+    <a class="cred-badge-card" href="https://dentofacialsleep.org/" target="_blank" rel="noopener">
+      <div class="cred-badge-name">World Dentofacial Sleep Society</div>
+      <div class="cred-badge-type">Member</div>
+    </a>
+    <a class="cred-badge-card" href="https://iaom.com/" target="_blank" rel="noopener">
+      <div class="cred-badge-name">International Association of Orofacial Myology</div>
+      <div class="cred-badge-type">Member &amp; Trained</div>
+    </a>
+    <a class="cred-badge-card" href="https://breatheinstitute.com/" target="_blank" rel="noopener">
+      <div class="cred-badge-name">The Breathe Institute</div>
+      <div class="cred-badge-type">Ambassador</div>
+    </a>
+    <a class="cred-badge-card" href="https://www.asha.org/" target="_blank" rel="noopener">
+      <div class="cred-badge-name">American Speech-Language-Hearing Association</div>
+      <div class="cred-badge-type">CCC-SLP Certified</div>
+    </a>
+    <a class="cred-badge-card" href="https://www.hanen.org/" target="_blank" rel="noopener">
+      <div class="cred-badge-name">The Hanen Centre</div>
+      <div class="cred-badge-type">Certified Therapist</div>
+    </a>
+    <a class="cred-badge-card" href="https://www.aapmd.org/" target="_blank" rel="noopener">
+      <div class="cred-badge-name">American Academy of Physiological Medicine &amp; Dentistry</div>
+      <div class="cred-badge-type">Member</div>
+    </a>
+    <a class="cred-badge-card" href="https://tonguetieal.com/" target="_blank" rel="noopener">
+      <div class="cred-badge-name">Alabama Tongue-Tie Center</div>
+      <div class="cred-badge-type">Additional Education &amp; Training</div>
+    </a>
+  </div>
+</section>
+
 <section id="collab" class="collab-section">
   <div class="eyebrow">Collaborative care</div>
   <h2 class="section-h2">Treatment that extends <em>beyond the therapy room.</em></h2>
@@ -235,48 +272,7 @@
 </section>
 
 
-<section class="cred-badges-section">
-  <div class="eyebrow">Credentials &amp; affiliations</div>
-  <h2 class="section-h2">Trained and affiliated with <em>leading organizations.</em></h2>
-  <p class="section-intro">Lauren holds training, membership, and ambassador status with the following professional organizations in orofacial myology, sleep medicine, and speech-language pathology.</p>
-  <div class="cred-badges-grid">
-    <a class="cred-badge-card" href="https://dentofacialsleep.org/" target="_blank" rel="noopener">
-      <div class="cred-badge-abbr">WDSS</div>
-      <div class="cred-badge-name">World Dentofacial Sleep Society</div>
-      <div class="cred-badge-type">Member</div>
-    </a>
-    <a class="cred-badge-card" href="https://iaom.com/" target="_blank" rel="noopener">
-      <div class="cred-badge-abbr">IAOM</div>
-      <div class="cred-badge-name">International Association of Orofacial Myology</div>
-      <div class="cred-badge-type">Member &amp; Trained</div>
-    </a>
-    <a class="cred-badge-card" href="https://breatheinstitute.com/" target="_blank" rel="noopener">
-      <div class="cred-badge-abbr">BI</div>
-      <div class="cred-badge-name">The Breathe Institute</div>
-      <div class="cred-badge-type">Ambassador</div>
-    </a>
-    <a class="cred-badge-card" href="https://www.asha.org/" target="_blank" rel="noopener">
-      <div class="cred-badge-abbr">ASHA</div>
-      <div class="cred-badge-name">American Speech-Language-Hearing Association</div>
-      <div class="cred-badge-type">CCC-SLP Certified</div>
-    </a>
-    <a class="cred-badge-card" href="https://www.hanen.org/" target="_blank" rel="noopener">
-      <div class="cred-badge-abbr">Hanen</div>
-      <div class="cred-badge-name">The Hanen Centre</div>
-      <div class="cred-badge-type">Certified Therapist</div>
-    </a>
-    <a class="cred-badge-card" href="https://www.aapmd.org/" target="_blank" rel="noopener">
-      <div class="cred-badge-abbr">AAPMD</div>
-      <div class="cred-badge-name">American Academy of Physiological Medicine &amp; Dentistry</div>
-      <div class="cred-badge-type">Member</div>
-    </a>
-    <a class="cred-badge-card" href="https://tonguetieal.com/" target="_blank" rel="noopener">
-      <div class="cred-badge-abbr">ATTC</div>
-      <div class="cred-badge-name">Alabama Tongue-Tie Center</div>
-      <div class="cred-badge-type">Additional Education &amp; Training</div>
-    </a>
-  </div>
-</section>
+
 
 <!-- footer:start -->
 <footer>
