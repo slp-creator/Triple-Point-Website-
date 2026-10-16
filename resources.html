@@ -57,16 +57,6 @@
 /* Recommended books: same inversion as the organization cards above. */
 .book-card{background:var(--deep);border-color:rgba(255,255,255,.18)}
 .book-card, .book-card *{color:#FFFFFF !important}
-.book-card{display:flex;gap:14px;align-items:flex-start}
-.book-cover{width:62px;flex:0 0 62px;aspect-ratio:2/3;object-fit:cover;border-radius:2px;
-  background:rgba(255,255,255,.08)}
-.book-text{display:flex;flex-direction:column;min-width:0}
-/* long unbroken domains (breathesleepthrivebook.com) otherwise run past the card */
-.book-card a{overflow-wrap:anywhere}
-/* a cover needs more room than the 220px the grid was built for */
-.books-grid{grid-template-columns:repeat(auto-fit,minmax(268px,1fr))}
-.book-card h4{margin-bottom:8px}
-.book-card a{margin-top:auto}
 
 /* Closing CTA */
 
@@ -249,52 +239,28 @@
     <div class="research-group-title">Recommended books</div>
     <div class="books-grid">
       <div class="book-card">
-        <img class="book-cover" src="book-covers/tongue-tied.jpg" alt=""
-             onerror="this.src='book-covers/_placeholder.svg'">
-        <div class="book-text">
-          <h4>Tongue-Tied: How a Tiny String Under the Tongue Impacts Nursing, Speech, Feeding, and More</h4>
-          <a href="https://tonguetie.com/book/" target="_blank" rel="noopener">tonguetie.com →</a>
-        </div>
+        <h4>Tongue-Tied: How a Tiny String Under the Tongue Impacts Nursing, Speech, Feeding, and More</h4>
+        <a href="https://tonguetie.com/book/" target="_blank" rel="noopener">tonguetie.com →</a>
       </div>
       <div class="book-card">
-        <img class="book-cover" src="book-covers/sleep-wrecked-kids.jpg" alt=""
-             onerror="this.src='book-covers/_placeholder.svg'">
-        <div class="book-text">
-          <h4>Sleep Wrecked Kids: Helping Parents Raise Happy, Healthy Kids One Sleep at a Time</h4>
-          <a href="https://sleepwreckedkids.com/" target="_blank" rel="noopener">sleepwreckedkids.com →</a>
-        </div>
+        <h4>Sleep Wrecked Kids: Helping Parents Raise Happy, Healthy Kids One Sleep at a Time</h4>
+        <a href="https://sleepwreckedkids.com/" target="_blank" rel="noopener">sleepwreckedkids.com →</a>
       </div>
       <div class="book-card">
-        <img class="book-cover" src="book-covers/jaws.jpg" alt=""
-             onerror="this.src='book-covers/_placeholder.svg'">
-        <div class="book-text">
-          <h4>Jaws: The Story of a Hidden Epidemic</h4>
-          <a href="https://www.sup.org/books/science/jaws" target="_blank" rel="noopener">sup.org →</a>
-        </div>
+        <h4>Jaws: The Story of a Hidden Epidemic</h4>
+        <a href="https://www.sup.org/books/science/jaws" target="_blank" rel="noopener">sup.org →</a>
       </div>
       <div class="book-card">
-        <img class="book-cover" src="book-covers/breathe-sleep-thrive.jpg" alt=""
-             onerror="this.src='book-covers/_placeholder.svg'">
-        <div class="book-text">
-          <h4>Breathe, Sleep, Thrive: Discover How Airway Health Can Unlock Your Child's Greater Health, Learning, and Potential</h4>
-          <a href="https://breathesleepthrivebook.com/" target="_blank" rel="noopener">breathesleepthrivebook.com →</a>
-        </div>
+        <h4>Breathe, Sleep, Thrive: Discover How Airway Health Can Unlock Your Child's Greater Health, Learning, and Potential</h4>
+        <a href="https://breathesleepthrivebook.com/" target="_blank" rel="noopener">breathesleepthrivebook.com →</a>
       </div>
       <div class="book-card">
-        <img class="book-cover" src="book-covers/why-we-sleep.jpg" alt=""
-             onerror="this.src='book-covers/_placeholder.svg'">
-        <div class="book-text">
-          <h4>Why We Sleep: Unlocking the Power of Sleep and Dreams</h4>
-          <a href="https://www.sleepdiplomat.com/" target="_blank" rel="noopener">sleepdiplomat.com →</a>
-        </div>
+        <h4>Why We Sleep: Unlocking the Power of Sleep and Dreams</h4>
+        <a href="https://www.sleepdiplomat.com/" target="_blank" rel="noopener">sleepdiplomat.com →</a>
       </div>
       <div class="book-card">
-        <img class="book-cover" src="book-covers/breath.jpg" alt=""
-             onerror="this.src='book-covers/_placeholder.svg'">
-        <div class="book-text">
-          <h4>Breath: The New Science of a Lost Art</h4>
-          <a href="https://www.mrjamesnestor.com/breath-book" target="_blank" rel="noopener">mrjamesnestor.com →</a>
-        </div>
+        <h4>Breath: The New Science of a Lost Art</h4>
+        <a href="https://www.mrjamesnestor.com/breath-book" target="_blank" rel="noopener">mrjamesnestor.com →</a>
       </div>
     </div>
   </div>
