@@ -19,7 +19,6 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
-const BOOKING_URL = 'https://triplepointspeechtherapy.janeapp.com/';
 
 // Which nav item is highlighted on each page.
 const PAGES = {
@@ -115,7 +114,6 @@ function footerHtml() {
 </footer>
 <div class="footer-bottom">
   <span>&copy; 2026 Triple Point Speech Therapy. All Rights Reserved.</span>
-  <a href="${BOOKING_URL}" target="_blank" rel="noopener">Patient Portal &rarr;</a>
 </div>`;
 }
 
